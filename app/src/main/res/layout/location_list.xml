@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.itechvision.ecrobo.pickman.widget.RadioListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ecr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/products"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    ecr:inner_layout="location_list_row"
+    ecr:select_radio="stc_prd_0"
+    />

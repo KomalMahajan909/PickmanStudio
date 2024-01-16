@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_wallpaper"
+    android:orientation="vertical"
+    android:id="@+id/activity_arrival"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_wallpaper"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relMainAction"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:background="@color/layoutActionbar"
+            android:layout_alignParentTop="true"
+            >
+
+            <RelativeLayout
+                android:id="@+id/relLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/img1ActionBar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/back"
+                    android:tint="@color/white"
+                    android:visibility="visible"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@id/relLayout1"
+                android:gravity="center_horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:text="ピッキング検品"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="30dp"
+                android:gravity="center_horizontal"
+                >
+
+                <Button
+                    android:id="@+id/notif_count_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_packing"
+                    android:gravity="center"
+                    android:minHeight="32dp"
+                    android:minWidth="32dp"
+                    android:padding="2dp"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    >
+                </Button>
+
+                <Button
+                    android:id="@+id/notif_count_red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/notif_count_green"
+                    android:background="@drawable/shape_notification"
+                    android:gravity="center"
+                    android:minHeight="32dp"
+                    android:minWidth="32dp"
+                    android:padding="2dp"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    >
+                </Button>
+
+                <Button
+                    android:id="@+id/notif_count_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/notif_count_red"
+                    android:background="@drawable/shape_pickings"
+                    android:gravity="center"
+                    android:minHeight="32dp"
+                    android:minWidth="32dp"
+                    android:padding="2dp"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    >
+                </Button>
+
+                <Button
+                    android:id="@+id/notif_count_yellow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/notif_count_blue"
+                    android:background="@drawable/shape_yellow_btn"
+                    android:gravity="center"
+                    android:minHeight="32dp"
+                    android:minWidth="32dp"
+                    android:padding="2dp"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    >
+                </Button>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_main"
+            android:layout_below="@id/relMainAction"
+            android:layout_alignParentEnd="true"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollMain"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="right"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/skipList"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/gray_button_background"
+                            android:text="Cancelled"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="88dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="@string/location"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_gravity="center"
+                            />
+                        <EditText
+                            android:id="@+id/location"
+                            android:layout_width="0dp"
+                            android:layout_height="34dp"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:singleLine="true"
+                            android:selectAllOnFocus="true"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp" >
+
+                        <TextView
+                            android:layout_width="88dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="@string/productCode"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/product_code"
+                            android:layout_width="0dp"
+                            android:layout_height="34dp"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:singleLine="true"
+                            android:selectAllOnFocus="true"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="4dp"
+                        >
+
+                        <TextView
+                            android:layout_width="88dp"
+                            android:layout_height="34dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="@string/barcode"
+                            android:textColor="@color/white"
+                            />
+
+                        <EditText
+                            android:id="@+id/barcode"
+                            android:layout_width="0dp"
+                            android:layout_height="34dp"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:singleLine="true"
+                            android:selectAllOnFocus="true"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="88dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="@string/quantity"
+                            android:textColor="@color/white" />
+
+                        <EditText
+                            android:id="@+id/quantity"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:layout_weight="1"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            android:layout_marginTop="4dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp"
+                        >
+
+                        <TextView
+                            android:layout_width="88dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="@string/standardone"
+                            android:textColor="@color/white" />
+
+                        <EditText
+                            android:id="@+id/standard1"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:layout_weight="1"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            android:layout_marginTop="4dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp"
+                        >
+
+                        <TextView
+                            android:layout_width="88dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="@string/standardtwo"
+                            android:textColor="@color/white"
+                            />
+
+                        <EditText
+                            android:id="@+id/standard2"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:layout_weight="1"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            android:layout_marginTop="4dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gridlocationDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/productname_Label"
+                            android:layout_width="88dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/productname"
+                            android:text="@string/productname"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            />
+
+                        <TextView
+                            android:id="@+id/productname"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:selectAllOnFocus="false"
+                            android:focusable="false"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:textSize="16dp"
+                            android:textColor="@color/black"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/productQuantityLabel"
+                            android:layout_width="88dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/productQuantity"
+                            android:text="@string/remainingQuantity"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            />
+
+                        <EditText
+                            android:id="@+id/productQuantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_weight="0.8"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="false"
+                            android:focusable="false"
+                            android:singleLine="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            />
+
+                        <TextView
+                            android:id="@+id/shortBarcodeLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_weight="0.1"
+                            android:layout_gravity="center"
+
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/shortBarcode"
+                            android:text="@string/shortBarcode"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="3dp"
+                            />
+
+                        <EditText
+                            android:id="@+id/shortBarcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_weight="0.7"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="false"
+                            android:focusable="false"
+                            android:singleLine="true"
+                            android:layout_gravity="center"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp"
+                        >
+
+                        <TextView
+                            android:layout_width="88dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="注文番号"
+                            android:textColor="@color/white"
+                            />
+
+                        <EditText
+                            android:id="@+id/order_no"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:maxLength="100"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:layout_weight="1"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp"
+                        >
+
+                        <TextView
+                            android:layout_width="88dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="注文者"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:textColor="@color/white"
+                            />
+
+                        <EditText
+                            android:id="@+id/orderer_name"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:windowSoftInputMode="stateAlwaysHidden" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/rl_box"
+                        android:visibility="visible"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1.6">
+                        <TextView
+                            android:layout_width="88dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="ボックス"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="65dp"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            >
+                            <TextView
+                                android:id="@+id/boxtext"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:layout_centerInParent="true"
+                                android:textSize="50sp"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:background="@drawable/red_rounded_corner_button"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="88dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="箱番号"
+                            android:textColor="@color/white" />
+
+                        <EditText
+                            android:id="@+id/box_no"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:weightSum="2"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        >
+
+                        <Button
+                            android:id="@+id/add_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/gray_button_background"
+                            android:onClick="AddLayout"
+                            android:text="@string/showkeyboard"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            />
+
+                        <Button
+                            android:id="@+id/stop"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="0.6"
+                            android:background="#CC0001"
+                            android:text="stop"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:visibility="gone"
+                            />
+
+                        <Button
+                            android:id="@+id/search_screen"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="0.7"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/gray_button_background"
+                            android:text="検索"
+                            android:visibility="gone"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/layout_number"
+        android:visibility="gone" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

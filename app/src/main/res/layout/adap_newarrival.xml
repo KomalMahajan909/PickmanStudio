@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+     >
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_weight="0.62">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                 android:textSize="14sp"
+                android:id="@+id/a"
+                android:text="商品CD"
+                android:textColor="@color/Redcolor"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                 android:textSize="14sp"
+                android:id="@+id/b"
+                android:layout_below="@+id/a"
+                android:text="商品名"
+                android:textColor="@color/Redcolor"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                 android:textSize="14sp"
+                android:id="@+id/c"
+                android:layout_below="@+id/b"
+                android:text="予定"
+                android:textColor="@color/Redcolor"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                 android:textSize="14sp"
+                android:layout_below="@+id/c"
+                android:id="@+id/d"
+                android:text="検品"
+                android:textColor="@color/Redcolor"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5">
+            <TextView
+                android:id="@+id/sku_val"
+                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:text="SKU"
+                android:singleLine="true"
+                android:layout_alignParentStart="true"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/sku_name"
+                android:layout_below="@+id/sku_val"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:textSize="14sp"
+                android:singleLine="true"
+                 android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                 android:textColor="@color/black"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/sku_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:layout_below="@+id/sku_name"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:gravity="center|left"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/sku_qty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QTY"
+                android:layout_below="@+id/sku_date"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:gravity="center|left"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.8">
+
+
+            <TextView
+                android:id="@+id/operation"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="5dp"
+                 android:layout_height="30dp"
+                 android:text=""
+                 android:layout_centerInParent="true"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:background="@color/green_color"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_gravity="center"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+
+</LinearLayout>

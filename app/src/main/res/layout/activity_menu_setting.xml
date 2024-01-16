@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.itechvision.ecrobo.pickman.Chatman.Account.MenuSettingActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_wallpaper"
+        >
+
+        <com.itechvision.ecrobo.pickman.Util.ActionBar
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </com.itechvision.ecrobo.pickman.Util.ActionBar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_main"
+            android:layout_below="@id/actionbar"
+            android:layout_alignParentEnd="true"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollMain"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    >
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <CheckBox
+                            android:id="@+id/sdBatch"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="バッチ検品"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/dBatch"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="D バッチ検品"
+                            android:visibility="gone"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <CheckBox
+                            android:id="@+id/temporaryLocation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="チラシピッグ"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/koguchi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:text="個口変更"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            android:layout_marginLeft="50dp"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        >
+
+
+                        <!--<CheckBox-->
+                        <!--android:id="@+id/picking"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:text="ピック検品"-->
+                        <!--android:checked="true"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:background="@drawable/textlabel_bg"-->
+                        <!--/>-->
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        >
+
+                        <CheckBox
+                            android:id="@+id/boxSize"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="箱サイズ変更"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/stockChange"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="在庫マイナス"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            android:layout_marginLeft="50dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <CheckBox
+                            android:id="@+id/pdBoxSize"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="PD出荷工程"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            />
+                        <CheckBox
+                            android:id="@+id/shipping"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="レジ検品(G)"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            android:layout_marginLeft="50dp"
+                            />
+                    </LinearLayout>
+
+
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--&gt;-->
+
+                    <!--<CheckBox-->
+                    <!--android:id="@+id/returnActivity"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="返品入荷"-->
+                    <!--android:checked="true"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:background="@drawable/textlabel_bg"-->
+                    <!--/>-->
+
+                    <!--<CheckBox-->
+                    <!--android:id="@+id/returnAllocation"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="返品棚入れ"-->
+                    <!--android:checked="true"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:background="@drawable/textlabel_bg"-->
+                    <!--android:layout_marginLeft="50dp"-->
+                    <!--/>-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--&gt;-->
+
+                    <!--<CheckBox-->
+                    <!--android:id="@+id/returnStock"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="返品登録"-->
+                    <!--android:checked="true"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:background="@drawable/textlabel_bg"-->
+                    <!--/>-->
+
+                    <!--<CheckBox-->
+                    <!--android:id="@+id/moveStock"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="在庫移動"-->
+                    <!--android:checked="true"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:background="@drawable/textlabel_bg"-->
+                    <!--android:layout_marginLeft="50dp"-->
+                    <!--/>-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--&gt;-->
+
+                    <!--<CheckBox-->
+                    <!--android:id="@+id/moveLocation"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="ロケ移動"-->
+                    <!--android:checked="true"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:background="@drawable/textlabel_bg"-->
+                    <!--/>-->
+
+                    <!--<CheckBox-->
+                    <!--android:id="@+id/inventory"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="棚卸"-->
+                    <!--android:checked="true"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:background="@drawable/textlabel_bg"-->
+                    <!--android:layout_marginLeft="50dp"-->
+                    <!--/>-->
+                    <!--</LinearLayout>-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <CheckBox
+                            android:id="@+id/truckBatch"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="@string/TruckBatch"
+                            android:textColor="@color/white" />
+
+                        <CheckBox
+                            android:id="@+id/barcodeprinter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="ラベル印刷"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            android:layout_marginLeft="50dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        >
+
+                        <CheckBox
+                            android:id="@+id/packSet"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="セット制作指示(Regi"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/newPackSet"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="セット制作指示(Pic)"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            android:layout_marginLeft="50dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <CheckBox
+                            android:id="@+id/rfarrivalchk"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="RFID入荷検品"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/rfreturnchk"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="返送検品"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            android:layout_marginLeft="50dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <CheckBox
+                            android:id="@+id/slipPrint"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="1-1検品"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/rfPicking"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/RFPicking"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            android:layout_marginLeft="50dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <CheckBox
+                            android:id="@+id/machineprint"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="プリンター選択"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            />
+                        <CheckBox
+                            android:id="@+id/barcodeSlipPrinter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="RFIDラベル"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            android:layout_marginLeft="50dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <CheckBox
+                            android:id="@+id/rfWriter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="RFID書き込み"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            />
+                        <CheckBox
+                            android:id="@+id/ecms"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="重量"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            android:layout_marginLeft="50dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_marginTop="5dp">
+
+                        <CheckBox
+                            android:id="@+id/pickList"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="Dolピック検品"
+                            android:textColor="@color/white"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/totalarrival"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="Dol入荷検品"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:visibility="visible">
+
+                        <CheckBox
+                            android:id="@+id/newBatchPick"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="TAS"
+                            android:textColor="@color/white"
+                            />
+                        <CheckBox
+                            android:id="@+id/newTasPick"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="50dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="B Totalピック"
+                            android:textColor="@color/white"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:visibility="visible">
+
+
+                        <CheckBox
+                            android:id="@+id/newreturnStock"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="返品登録"
+                            android:textColor="@color/white"
+                            />
+                        <CheckBox
+                            android:id="@+id/newPrinterSelect"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="New Printer"
+                            android:layout_marginLeft="50dp"
+                            android:textColor="@color/white"
+                            android:visibility="visible"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:visibility="visible">
+
+
+                        <CheckBox
+                            android:id="@+id/newdolarrival"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="D-Tピック"
+                            android:textColor="@color/white"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/returnStockBarcode"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="@string/action_returnstock_barcode"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <CheckBox
+                            android:id="@+id/koguchiPrint_chk"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="送り状CSV"
+                            android:textColor="@color/white"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/invoice_printing"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="送り状印刷"
+                            android:visibility="visible"
+                            android:layout_marginLeft="50dp"
+                            android:textColor="@color/white"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <CheckBox
+                            android:id="@+id/mitsukoshi_arrival_chk"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="@string/MitsukoshiArrival"
+                            android:textColor="@color/white"
+                            />
+
+
+                        <CheckBox
+                            android:id="@+id/simple_shipping_chk"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="Newレジ検品"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_marginTop="5dp">
+
+                        <CheckBox
+                            android:id="@+id/customer_arrival"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="@string/action_customer_arrival"
+                            android:textSize="13dp"
+                            android:textColor="@color/white"
+                            />
+                        <CheckBox
+                            android:id="@+id/tshipping"
+                            android:visibility="visible"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="Tレジ検品"
+                            android:textSize="13dp"
+                            android:layout_marginLeft="50dp"
+                            android:textColor="@color/white"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_marginTop="5dp">
+
+                        <CheckBox
+                            android:id="@+id/new_move_stock_check"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="IL在庫移動"
+                            android:textSize="13dp"
+                            android:textColor="@color/white"
+                            />
+                        <CheckBox
+
+                            android:id="@+id/invoice_shipping_check"
+                            android:visibility="visible"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="納品書送り状照合"
+                            android:textSize="13dp"
+                            android:layout_marginLeft="50dp"
+                            android:textColor="@color/white"
+                            />
+                        <!--   <CheckBox
+
+                               android:id="@+id/multiuser_shipping_check"
+                               android:visibility="invisible"
+                               android:layout_width="0dp"
+                               android:layout_weight="1"
+                               android:layout_height="wrap_content"
+                               android:background="@drawable/textlabel_bg"
+                               android:text="Multiuserレジ検品"
+                               android:textSize="13dp"
+                               android:layout_marginLeft="50dp"
+                               android:textColor="@color/white"
+                               />-->
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_marginTop="5dp"
+                        >
+aS
+                        <CheckBox
+                            android:id="@+id/dm_batch_picking"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="カートピック"
+                            android:textSize="13dp"
+                            android:textColor="@color/white"
+                            />
+                        <CheckBox
+
+                            android:id="@+id/multiuser_shipping_check"
+                            android:layout_width="0dp"
+                            android:visibility="invisible"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="Multiuserレジ検品"
+                            android:textSize="13dp"
+                            android:layout_marginLeft="50dp"
+                            android:textColor="@color/white"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <CheckBox
+                            android:id="@+id/new_invoice_print"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="帳票後出印刷"
+                            android:textSize="13dp"
+                            android:textColor="@color/white"
+                            />
+
+                        <CheckBox
+                            android:visibility="invisible"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="Multiuse"
+                            android:textSize="13dp"
+                            android:layout_marginLeft="50dp"
+                            android:textColor="@color/white"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:visibility="visible"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <CheckBox
+                            android:id="@+id/iris_arrival"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="入荷ロット検品"
+                            android:textSize="13dp"
+                            android:textColor="@color/white"
+                            />
+                        <CheckBox
+                            android:id="@+id/iris_picking"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="@string/action_iris_picking"
+                            android:textSize="13dp"
+                            android:layout_marginLeft="50dp"
+                            android:textColor="@color/white"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:visibility="visible"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <CheckBox
+                            android:id="@+id/diamaru_batch_picking"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="マルチピックDM"
+                            android:textSize="13dp"
+                            android:textColor="@color/white"
+                            />
+                        <CheckBox
+
+                            android:visibility="invisible"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="Tレジ検品"
+                            android:textSize="13dp"
+                            android:layout_marginLeft="50dp"
+                            android:textColor="@color/white"
+                            />
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp">
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:text="保存"
+                            android:id="@+id/save"
+                            android:layout_centerInParent="true"
+                            android:background="@color/green_color"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

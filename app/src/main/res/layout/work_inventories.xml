@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:rowOrderPreserved="true"
+    android:background="@drawable/background_wallpaper"
+    >
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/close"
+        android:src="@drawable/ic_close"
+        android:layout_gravity="right"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/gridMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/actionbar"
+            >
+
+            <TextView
+                android:id="@+id/stock1Label"
+                android:layout_width="96dp"
+                android:layout_height="30dp"
+                android:text="在庫数"
+                android:background="@drawable/textlabel_bg"
+                android:gravity="center"
+                />
+
+            <Button
+                android:id="@+id/sendToServer"
+                android:layout_height="wrap_content"
+                android:layout_width="160dp"
+                android:text="@string/send_to_server"
+                android:focusable="false"
+                android:layout_marginLeft="30dp"
+                android:focusableInTouchMode="false"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/work_inventory_header"
+            android:layout_below="@+id/gridMain"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="10dp"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="@string/barcode"
+                android:gravity="center"
+                android:background="@drawable/textlabel_bg"
+                android:layout_weight="1.3"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="@string/quantity"
+                android:gravity="center"
+                android:layout_weight="0.9"
+                android:background="@drawable/textlabel_bg"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="@string/work_scanned"
+                android:gravity="center"
+                android:layout_weight="0.9"
+                android:background="@drawable/textlabel_bg"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="@string/work_change"
+                android:gravity="center"
+                android:layout_weight="0.9"
+                android:background="@drawable/textlabel_bg"
+                />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/work_inventory"
+            android:layout_below="@+id/work_inventory_header"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/list_border"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_margin="25dp"
+        android:layout_centerInParent="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_close"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:gravity="center"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.6"
+                android:background="@drawable/textlabel_bg"
+                android:text="Time"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white" />
+<Space
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="0.2"/>
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:layout_gravity="center|right"
+
+                 android:singleLine="true"
+                android:text="hh:mm"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="18sp"
+                  android:background="@drawable/basic_edittext_off_nopadding" />
+
+
+
+        </LinearLayout>
+
+
+             <Button
+            android:id="@+id/submit"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="15dp"
+              android:background="@color/packing_btn"
+            android:text="@string/submit"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

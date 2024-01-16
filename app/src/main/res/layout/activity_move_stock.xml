@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:rowOrderPreserved="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_wallpaper"
+        >
+
+        <com.itechvision.ecrobo.pickman.Util.ActionBar
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+        </com.itechvision.ecrobo.pickman.Util.ActionBar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_main"
+            android:layout_below="@id/actionbar"
+            android:layout_alignParentEnd="true"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollMain"
+                >
+
+                <LinearLayout
+                    android:id="@+id/gridMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/actionbar"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    >
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="7dp"
+                        >
+
+                        <RadioGroup
+                            android:id="@+id/batchRg"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            >
+
+                            <RadioButton
+                                android:id="@+id/usebatch"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:textSize="15dp"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Use Batch"
+                                android:layout_weight="1"
+                                android:onClick="BatchUse"
+                                android:checked="true"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/notuse"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_marginLeft="10dp"
+                                android:textSize="15dp"
+                                android:layout_weight="1"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Not Use Batch"
+                                android:onClick="BatchUse"
+                                />
+                        </RadioGroup>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/locfixLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/locfixed"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/source"
+                            android:text="ロケ先桁数"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+                        <CheckBox
+                            android:id="@+id/locfixedCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:buttonTint="@color/white"
+                            android:layout_marginLeft="5dp" />
+                        <LinearLayout
+                            android:id="@+id/locationdigitLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+                            <EditText
+                                android:id="@+id/locFixDigits"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="0.7"
+                                android:layout_gravity="center"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:windowSoftInputMode="stateAlwaysHidden"
+                                android:maxLength="100"
+                                android:editable="true"
+                                android:inputType="number"
+                                android:selectAllOnFocus="true"
+                                android:singleLine="true"
+                                />
+
+                            <Button
+                                android:id="@+id/locDelete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:text="SAVE"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="0.3"
+                                android:background="@drawable/green_rounded_corner_btn"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/qtyfixLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/qtyfixed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/source"
+                            android:text="数量1固定で確定"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/qtyfixedCheck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:buttonTint="@color/white"
+                            android:checked="true"
+                            android:layout_marginLeft="5dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/sourceLabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/source"
+                            android:text="移動元ロケ"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <EditText
+                            android:id="@+id/source"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:layout_gravity="center"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:maxLength="100"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/barcodeLabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/barcode"
+                            android:text="@string/barcode"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <EditText
+                            android:id="@+id/barcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:maxLength="100"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/partnoLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/barcode"
+                            android:text="@string/productCode"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:layout_gravity="center"
+                            />
+                        <RelativeLayout
+                            android:id="@+id/spinnerpartlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            >
+
+                            <Spinner
+                                android:id="@+id/partnoSpinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:paddingLeft="5dp"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gridLotNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                         android:visibility="visible"
+                        >
+
+                        <TextView
+                            android:id="@+id/lotnoLabel"
+                            android:layout_width="92dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/lotno"
+                            android:layout_gravity="center"
+                            android:text="@string/lotno"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:id="@+id/lotno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:maxLength="100"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                             android:gravity="center|left"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                             android:maxEms="100"
+                             android:ellipsize="marquee"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/gridExpiration"
+                            android:layout_weight="1"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="34dp"
+                                android:layout_weight="0.3"
+                                android:text="Exp."
+                                android:gravity="center"
+                                android:layout_marginStart="2dp"
+                                android:layout_gravity="center"
+                                android:id="@+id/expirationLabel"
+                                android:background="@drawable/textlabel_bg"
+                                android:textColor="@color/white"
+                                android:labelFor="@+id/expirationdate"
+                                />
+
+                            <EditText
+                                android:id="@+id/expirationdate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:editable="false"
+                                android:inputType="none"
+                                android:maxLength="100"
+                                android:selectAllOnFocus="true"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/product_codeLabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/product_code"
+                            android:text="@string/productCode"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <EditText
+                            android:id="@+id/product_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="false"
+                            android:focusable="false"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutStandard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/standardOneLabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/productCode"
+                            android:text="規格1"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:id="@+id/standard1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:textSize="16dp"
+                            android:textColor="@color/black"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:focusable="false"
+                            android:layout_gravity="center"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="false"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/standardTwoLabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/standard2"
+                            android:text="規格2"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:id="@+id/standard2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="false"
+                            android:ellipsize="marquee"
+                            android:textSize="16dp"
+                            android:textColor="@color/black"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:focusable="false"
+                            android:layout_gravity="center"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        android:layout_marginTop="3dp">
+
+                        <ListView
+                            android:id="@+id/list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:nestedScrollingEnabled="true"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gridlocationDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/currentStocklabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/currentStock"
+                            android:text="移動可能数"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <EditText
+                            android:id="@+id/currentStock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:layout_gravity="center"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="false"
+                            android:focusable="false"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/quantityLabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/quantity"
+                            android:text="@string/quantity"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <EditText
+                            android:id="@+id/quantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:layout_gravity="center"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/spinnerlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/basic_edittext_off"
+                        >
+
+                        <Spinner
+                            android:id="@+id/classificationspinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+                        </Spinner>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/destinationLabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/destinationLabel"
+                            android:text="移動先ロケ"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <EditText
+                            android:id="@+id/destination"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/add_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/gridlocationDetail"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/gray_button_background"
+                        android:onClick="AddLayout"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="@string/showkeyboard"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/layout_number"
+            android:visibility="invisible"
+            >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

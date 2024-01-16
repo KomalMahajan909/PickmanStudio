@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_wallpaper"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/layoutActionbar">
+
+        <ImageView
+            android:id="@+id/menubar"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ic_menu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/menubar"
+            android:text="HOME"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="15dp"
+            android:background="@color/green_color"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp">
+
+            <LinearLayout
+                android:id="@+id/shopLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="151dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/textlabel_bg"
+                    android:text="店舗選択"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/textlabel_bg">
+
+                    <Spinner
+                        android:id="@+id/spinnershopID"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/radiobtnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/shopLayout">
+            <LinearLayout
+                android:id="@+id/keyboardLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="151dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/textlabel_bg"
+                    android:gravity="center"
+                    android:text="キーボードを表示"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/keyboardRg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/showkeyboardRb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/layoutActionbar"
+                        android:checked="true"
+                        android:onClick="AddKeyboard"
+                        android:text="Yes"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/hidekeyboardRb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/layoutActionbar"
+                        android:onClick="AddKeyboard"
+                        android:text="No"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/scanProductLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="151dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/textlabel_bg"
+                        android:gravity="center"
+                        android:text="検品"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/scanProductRb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/scanProductyesRb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/layoutActionbar"
+                            android:checked="true"
+                            android:onClick="scanProduct"
+                            android:text="Yes"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+                        <RadioButton
+                            android:id="@+id/scanProductnoRb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/layoutActionbar"
+                            android:onClick="scanProduct"
+                            android:text="No"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sIncludeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="151dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/textlabel_bg"
+                    android:gravity="center"
+                    android:text="同梱物検品"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/sIncludeRg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/sincludeyesRb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/layoutActionbar"
+                        android:checked="true"
+                        android:onClick="SInclude"
+                        android:text="Yes"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/sincludenoRb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/layoutActionbar"
+                        android:onClick="SInclude"
+                        android:text="No"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/includeScreenLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="151dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/textlabel_bg"
+                    android:gravity="center"
+                    android:text="同梱物スキャン"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/includeScreenRg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/includeScreenyesRb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/layoutActionbar"
+                        android:checked="true"
+                        android:onClick="IncludeScreen"
+                        android:text="Yes"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/includeScreennoRb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/layoutActionbar"
+                        android:checked="false"
+                        android:onClick="IncludeScreen"
+                        android:text="No"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/batchScreenLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="151dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/textlabel_bg"
+                    android:gravity="center"
+                    android:text="バッチ検品"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/batchScreenRg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/batchScreenyesRb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/layoutActionbar"
+                        android:checked="true"
+                        android:onClick="BatchScreen"
+                        android:text="Yes"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/batchScreennoRb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/layoutActionbar"
+                        android:checked="false"
+                        android:onClick="BatchScreen"
+                        android:text="No"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+                </RadioGroup>
+            </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/checkboxLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radiobtnLayout"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5"
+                    >
+
+                    <CheckBox
+                        android:id="@+id/checklotno"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="LotnoClick"
+                        android:text="Lot No./Exp."
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                         />
+
+                    <CheckBox
+                        android:id="@+id/checksupplierList"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="SupplierList"
+                        android:text="催事の返品機能"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                         />
+
+                    <CheckBox
+                        android:id="@+id/checkpackingList"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="PackingList"
+                        android:text="ﾊﾟｯｷﾝｸﾞﾘｽﾄ"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/checkshipping"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/checkpackingList"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="Shippingflag"
+                        android:text="出荷済"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/checkshipping"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="BoxSize"
+                        android:text="検品後出荷工程"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                         />
+
+                    <CheckBox
+                        android:id="@+id/checkarrivalNyuka"
+                        android:layout_width="match_parent"
+                        android:layout_height="29dp"
+                        android:layout_below="@+id/checkBoxSize"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="ArrivalNyuka"
+                        android:text="予定外入荷不可"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/checkShippingorderno"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="ShipOrderNumber"
+                        android:text="後払い検品"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                         />
+                    // to show popup on box size screen if boxsize is first selected from drop down and then any box button is selected
+                    <CheckBox
+                        android:id="@+id/checkBoxChange"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="BoxChangeCheck"
+                        android:text="出荷工程確認"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        />
+
+                    // to Reship shipping order
+
+                    <CheckBox
+                        android:id="@+id/checkReship"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="start|center"
+                        android:onClick="CheckReship"
+                        android:text="再レジ検品"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/checkremark"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="AddRemark"
+                        android:text="備考欄"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"  />
+
+                    <CheckBox
+                        android:id="@+id/checkNosupplierList"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="SupplierList"
+                        android:text="仕入先"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/checkprinter"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="PrinterSelected"
+                        android:text="自動印刷"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                         />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="BoxNo"
+                        android:text="@string/boxSize"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/checkTrackingNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="Trackcheck"
+                        android:text="問番検品しない"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/checkrepicking"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="TAS_ReShip"
+                        android:text="TAS後レジ検しない"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkTshipping_flag"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="TShipping_flag"
+                        android:text="T出荷済"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        />
+                    // to compare tracking no. date of order with current date if date is of future will show popup on box size screen
+                    <CheckBox
+                        android:id="@+id/checkTracking_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="left|center"
+                        android:onClick="Tracking_date_check"
+                        android:text="先日付出工警告"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pickingRequestLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkboxLayout"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="151dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/textlabel_bg"
+                    android:text="検品オプション"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/textlabel_bg">
+
+                    <Spinner
+                        android:id="@+id/pickingRequest"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/directStockLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pickingRequestLayout"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="151dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/textlabel_bg"
+                    android:text="入荷検品"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/textlabel_bg">
+
+                    <Spinner
+                        android:id="@+id/directStockSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/directStockLayout"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/voiceSettings"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/blue"
+                    android:gravity="center"
+                    android:text="Voice settings"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/allSetting"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/voiceSettings"
+                    android:background="@color/green_color"
+                    android:gravity="center"
+                    android:text="ALL settings"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textSize="@dimen/text_20"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="0.7"
+        android:textAlignment="center"
+        android:id="@+id/btc_pick_txt_1"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:layout_marginTop="1dp"
+        >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingLeft="5dp"
+            android:textSize="@dimen/text_20"
+            android:layout_marginLeft="1dp"
+            android:id="@+id/btc_pick_txt_00"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingLeft="5dp"
+            android:textSize="@dimen/text_20"
+            android:layout_marginLeft="1dp"
+            android:id="@+id/btc_pick_txt_01"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingLeft="5dp"
+            android:textSize="@dimen/text_20"
+            android:layout_marginLeft="1dp"
+            android:id="@+id/btc_pick_txt_02"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingLeft="5dp"
+            android:textSize="@dimen/text_20"
+            android:layout_marginLeft="1dp"
+            android:id="@+id/btc_pick_txt_03"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingLeft="5dp"
+            android:textSize="@dimen/text_20"
+            android:layout_marginLeft="1dp"
+            android:id="@+id/btc_pick_txt_04"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_marginTop="1dp"
+        android:textAlignment="center"
+        android:layout_marginLeft="1dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="0.8"
+        android:textSize="@dimen/text_20"
+        android:id="@+id/btc_pick_txt_2"
+        android:textColor="@color/black"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_marginTop="1dp"
+        android:textAlignment="center"
+        android:layout_marginLeft="1dp"
+        android:layout_weight="0.5"
+        android:textSize="@dimen/text_20"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/btc_pick_txt_3"
+        android:textColor="@color/black"
+        />
+</LinearLayout>
+

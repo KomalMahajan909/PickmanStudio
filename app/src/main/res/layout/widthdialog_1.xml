@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+
+                    android:layout_width="97dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="left|center"
+                    android:text="@string/productCode"
+                    android:textStyle="bold"
+                    android:background="@drawable/textlabel_bg"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/productcode"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="97dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="left|center"
+                    android:text="@string/productName"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/textlabel_bg"/>
+
+                <TextView
+                    android:id="@+id/productname"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:layout_gravity="center"
+                    android:gravity="left|center"
+                    android:paddingLeft="5dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                >
+
+                <TextView
+                    android:layout_width="97dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:text="Type"
+                    android:textColor="@color/white" />
+
+                <RelativeLayout
+                    android:id="@+id/spinnerlayout"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/basic_edittext_off_nopadding"
+                    android:selectAllOnFocus="true">
+
+                    <Spinner
+                        android:id="@+id/typespinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp">
+
+                    </Spinner>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="荷姿サイズ"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="97dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:text="縦 (mm)"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/Depth"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/basic_edittext_off_nopadding"
+                    android:editable="true"
+                     android:enabled="true"
+                    android:textColor="#545553"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:paddingLeft="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="97dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:text="幅 (mm)"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/Width"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/basic_edittext_off_nopadding"
+                    android:editable="true"
+                    android:enabled="true"
+                    android:textColor="#545553"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:paddingLeft="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="97dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:text="高さ (mm)"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/Height"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/basic_edittext_off_nopadding"
+                    android:editable="true"
+                    android:enabled="true"
+                    android:textColor="#545553"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:paddingLeft="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="97dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:text="重量 (g)"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/Weight"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/basic_edittext_off_nopadding"
+                    android:editable="true"
+                    android:enabled="true"
+                    android:textColor="#545553"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:paddingLeft="5dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <Button
+                    android:id="@+id/peace_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="個装サイズ"
+                    android:textSize="14sp"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="97dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:text="縦 (mm)"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/Depth1"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/basic_edittext_off_nopadding"
+                    android:editable="true"
+                    android:enabled="true"
+                    android:textColor="#545553"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:paddingLeft="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="97dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:text="幅 (mm)"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/Width1"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/basic_edittext_off_nopadding"
+                    android:editable="true"
+                    android:enabled="true"
+                    android:textColor="#545553"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:paddingLeft="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="97dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:text="高さ (mm)"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/Height1"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/basic_edittext_off_nopadding"
+                    android:editable="true"
+                    android:textColor="#545553"
+                    android:enabled="true"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:paddingLeft="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="97dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:text="重量 (g)"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/Weight1"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/basic_edittext_off_nopadding"
+                    android:editable="true"
+                    android:enabled="true"
+                    android:textColor="#545553"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:paddingLeft="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="97dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:text="入数"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/case_quantity"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/basic_edittext_off_nopadding"
+                    android:textSize="18sp"
+                    android:textColor="#545553"
+                    android:enabled="true"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:paddingLeft="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="97dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:text="廃棄区分"
+                    android:textColor="@color/white" />
+
+                <RelativeLayout
+                    android:id="@+id/disposal"
+                    android:layout_height="30dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:selectAllOnFocus="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/basic_edittext_off_nopadding"
+                    >
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:id="@+id/disposalspinner"
+                        >
+                    </Spinner>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/blue"
+                    android:text="Check"
+                    android:textSize="15sp" />
+
+             <!--   <Button
+                    android:id="@+id/enter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/packing_btn"
+                    android:text="enter"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"/>-->
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
+</RelativeLayout>

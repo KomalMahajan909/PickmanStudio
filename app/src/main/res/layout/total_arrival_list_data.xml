@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+     android:gravity="center"
+    android:weightSum="4"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sku_val"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="SKU"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/sku_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:text="Name" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/sku_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Date"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_gravity="center"
+         />
+
+
+    <TextView
+        android:id="@+id/sku_qty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="QTY"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        />
+
+<RelativeLayout
+    android:layout_width="0dp"
+        android:layout_weight="1"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/operation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text=""
+        android:layout_centerInParent="true"
+        android:textSize="14sp"
+        android:layout_marginStart="10dp"
+         android:background="@color/green_color"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        />
+
+</RelativeLayout>
+
+</LinearLayout>

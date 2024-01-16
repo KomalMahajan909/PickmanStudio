@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_wallpaper"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/layoutActionbar"
+
+        >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:id="@+id/back"
+            android:src="@drawable/back"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center"
+            android:tint="@color/white"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="8dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_voice"
+            android:layout_gravity="center"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/select"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:gravity="left|center"
+            android:text="Error voice"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/textlabel_bg"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.2"
+            android:background="@color/white"
+            android:gravity="center|left"
+            >
+
+            <com.reginald.editspinner.EditSpinner
+                android:id="@+id/error_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="5dp"
+                android:background="@android:color/transparent"
+                android:editable="false"
+                android:hint="bubu"
+                android:padding="7dp"
+                android:singleLine="true"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="14sp"
+                app:dropDownDrawable="@drawable/dropdown"
+                app:dropDownDrawableHeight="30dp"
+                app:dropDownDrawableWidth="30dp"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/select1"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:gravity="left|center"
+            android:text="Sucsess voice"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/textlabel_bg"
+            />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.2"
+            android:background="@color/white"
+            android:gravity="center|left"
+            >
+
+            <com.reginald.editspinner.EditSpinner
+                android:id="@+id/ok_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="5dp"
+                android:background="@android:color/transparent"
+                android:editable="false"
+                android:hint="piriron"
+                android:padding="7dp"
+                android:singleLine="true"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="14sp"
+                app:dropDownDrawable="@drawable/dropdown"
+                app:dropDownDrawableHeight="30dp"
+                app:dropDownDrawableWidth="30dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/green_color"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        />
+</LinearLayout>

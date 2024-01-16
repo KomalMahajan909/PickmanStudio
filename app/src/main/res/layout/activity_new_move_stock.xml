@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:rowOrderPreserved="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_wallpaper"
+        >
+
+        <com.itechvision.ecrobo.pickman.Util.ActionBar
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+        </com.itechvision.ecrobo.pickman.Util.ActionBar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_main"
+            android:layout_below="@id/actionbar"
+            android:layout_alignParentEnd="true"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollMain"
+                >
+
+                <LinearLayout
+                    android:id="@+id/gridMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/actionbar"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/sourceLabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/source"
+                            android:text="移動元ロケ"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <EditText
+                            android:id="@+id/source"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:layout_gravity="center"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:maxLength="100"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/barcodeLabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/barcode"
+                            android:text="@string/barcode"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <EditText
+                            android:id="@+id/barcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:maxLength="100"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/product_codeLabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/product_code"
+                            android:text="@string/productCode"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <EditText
+                            android:id="@+id/product_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="false"
+                            android:focusable="false"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutStandard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/standardOneLabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/productCode"
+                            android:text="規格1"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:id="@+id/standard1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:textSize="16dp"
+                            android:textColor="@color/black"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:focusable="false"
+                            android:layout_gravity="center"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="false"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/standardTwoLabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/standard2"
+                            android:text="規格2"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:id="@+id/standard2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="false"
+                            android:ellipsize="marquee"
+                            android:textSize="16dp"
+                            android:textColor="@color/black"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:focusable="false"
+                            android:layout_gravity="center"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        android:layout_marginTop="3dp">
+
+                        <ListView
+                            android:id="@+id/list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:nestedScrollingEnabled="true"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gridlocationDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/currentStocklabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/currentStock"
+                            android:text="移動可能数"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <EditText
+                            android:id="@+id/currentStock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:layout_gravity="center"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="false"
+                            android:focusable="false"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/quantityLabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/quantity"
+                            android:text="@string/quantity"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <EditText
+                            android:id="@+id/quantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:layout_gravity="center"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/destinationLabel"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/destinationLabel"
+                            android:text="移動先ロケ"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            />
+
+                        <EditText
+                            android:id="@+id/destination"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/add_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/gridlocationDetail"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/gray_button_background"
+                        android:onClick="AddLayout"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="@string/showkeyboard"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/layout_number"
+            android:visibility="invisible"
+            >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

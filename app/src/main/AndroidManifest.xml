@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.itechvision.ecrobo.pickman">
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
+
+    <application
+        android:name=".Application.ECRApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/newlogo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/circle_new_noname"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:node="replace"
+        tools:replace="android:icon">
+        <activity android:name=".Chatman.Ship.BoxListActivity"></activity>
+        <activity android:name=".Chatman.Arrivals.CustomerArrival.CustomerArrivalActivity" />
+        <activity android:name=".Chatman.Arrivals.CustomerArrival.CustomerIDActivity" />
+        <activity
+            android:name=".Chatman.Tshipping.PackingBoxListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".Chatman.Tshipping.BoxCashRegisterActivity" />
+        <activity android:name=".Chatman.PickWork.PrintKoguchi.PrintKoguchiActivity" />
+        <activity android:name=".Chatman.Account.SoundSettingsActivity" />
+        <activity android:name=".Chatman.Account.LoginActivity" />
+        <activity android:name=".Chatman.NewKoguchi.NewKoguchiActivity" />
+        <activity
+            android:name=".Chatman.Account.DemoLoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Chatman.Account.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.SearchLocationActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.ShippingActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.WWW6Server.DimaruShipping.Daimaru_Shipping"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.WWW6Server.DimaruShipping.Daimaru_IncludeShipping"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.WWW6Server.DimaruShipping.DaimaruShippingSpecificationActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.WWW6Server.OnetoONeSlip.ONetoOneShippingSpecification"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.IncludeShippingActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.BatchPickingActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.InvoicePrint.InvoicePrintActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.BatchPickingOrder"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Account.UpdateActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Arrivals.DirectarrivalActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Arrivals.ArrivalActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.SearchProductActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Arrivals.DirectReturnActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Arrivals.ReturnActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.ShippingSpecificationActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.KoguchiActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Arrivals.AllocationActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Stock.MoveStockActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Stock.MoveLocationActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Arrivals.ReturnAllocationActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Arrivals.ReturnStockActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.NewPickingActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.PackingBoxActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.ShippingPackingBoxActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Stock.InventoryActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Stock.StockAdjustmentActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Stock.StockChangeActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.PackSetActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.NewPackingSetActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.BoxSizeActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="f9e65dca35ce04b76e696a0aa57424ea9d89ea6a" />
+
+        <activity
+            android:name=".Chatman.Ship.DBatchActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.BatchBoxActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.DBatchPickingActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.DBatchPickingCategoryActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.DbatchIncludeActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.TruckBatchActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.TruckBatchPickingActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.PickWork.NewBatcPicking.NewdbatchPickingActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.PickWork.NewBatcPicking.BatchProductlistActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.PickWork.NewBatcPicking.NewinvoiceCheckActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.PickWork.TasPicking.NewtaspickingBarcodeActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.PickWork.NewBatcPicking.NewBatchPickingOrder"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.PickWork.NewBatcPicking.BoxstatusBatchActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.PickWork.TasPicking.Newtaspicking"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.PickWork.NewBatcPicking.NewtaspickDeliverynotesActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.PickWork.MisukoshiArrival.Arrival_ID_Activity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.PickWork.NewBatcPicking.TasbatchlistActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Arrivals.RFIDArrivalActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity android:name=".Chatman.Account.MenuSettingActivity" />
+        <activity android:name=".Chatman.RFDeviceBaseScan" />
+        <activity android:name=".Chatman.Account.SendLogActivity" />
+        <activity
+            android:name=".Chatman.Arrivals.RFID_ReturnActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity android:name=".Chatman.Stock.SlipPrinterActivity" />
+        <activity android:name=".Chatman.Arrivals.RFBarcodePrinterActivity" />
+        <activity android:name=".Chatman.PickWork.NewReturnStock.NewReturnStockActivity" />
+        <activity android:name=".Chatman.Stock.PrinterMachineActivity" />
+        <activity
+            android:name=".Chatman.Ship.RFPickingActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity android:name=".Chatman.Arrivals.RFTagCheckActivity" />
+        <activity android:name=".Chatman.Arrivals.RFReadWriteActivity" />
+        <activity
+            android:name=".Chatman.Stock.BarcodeLabelPrintActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity android:name=".Chatman.Ship.AddWeightsActivity" />
+        <activity
+            android:name=".Chatman.Ship.NewBoxSizeActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity android:name=".Chatman.RFID.RFWriterActivity" />
+        <activity android:name=".Chatman.Stock.TruckSearchActivity" />
+        <activity android:name=".Chatman.Ship.NewShippingGroupActivity" />
+        <activity android:name=".Chatman.Ship.NewPackingBoxGroupActivity" />
+        <activity android:name=".Chatman.Ship.TotalPickListActivity" />
+        <activity android:name=".Chatman.PickWork.DolphinArrival.TotalArrivalActivity" />
+        <activity
+            android:name=".Chatman.PickWork.DolphinArrival.CaseCommentActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".Chatman.PickWork.DolphinArrival.CaseQuantityActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.PickWork.NewPrinter.NewprinterScreenActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.PickWork.NewPrinter.NewsavedPrinterActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.PickWork.NewDolPick.NewdolpickcheckActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.PickWork.ReturnStockBarcode.ReturnStockBarcodeActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.PickWork.PrintKoguchi.NewShippingSpecificationBoxSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.NewKoguchiBoxSizeActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.WWW6Server.OnetoONeSlip.One_to_One_SlipPrinter"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.WWW6Server.ArrivalW6Activity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".Chatman.Ship.SimpleShippingActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".Chatman.PickWork.W6Batch.BatchPickingW6Activity" />
+        <activity android:name=".Chatman.PickWork.W6Batch.BatchBoxW6Activity" />
+        <activity android:name=".Chatman.PickWork.W6Batch.BatchListW6Activity" />
+        <activity android:name=".Chatman.DmBatch.DmBatchPickingActivity" />
+        <activity android:name=".Chatman.DmBatch.DmBatchBoxActivity" />
+        <activity android:name=".Chatman.DmBatch.DmBatchListActivity" />
+        <activity android:name=".Chatman.LoopShipping.LoopShipping" />
+        <activity android:name=".Chatman.Stock.NewMoveStock.NewMoveStockActivity"></activity>
+        <activity android:name=".Chatman.Ship.InvoiceShipping.InvoiceShippingActivity"/>
+
+        <activity android:name=".Chatman.IrisScreens.IrisDirectArrivalActivity"></activity>
+        <activity android:name=".Chatman.IrisScreens.Iris_Arrival_Activity" />
+        <activity android:name=".Chatman.IrisScreens.IrisPickingActivity" />
+    </application>
+
+</manifest>

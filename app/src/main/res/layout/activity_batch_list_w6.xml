@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_wallpaper"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_wallpaper"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <com.itechvision.ecrobo.pickman.Util.ActionBar
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+        </com.itechvision.ecrobo.pickman.Util.ActionBar>
+
+        <RelativeLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/actionbar"
+            android:layout_alignParentEnd="true">
+
+            <ScrollView
+                android:id="@+id/scrollMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="left|center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1.4"
+                        android:background="@drawable/list_background"
+                        android:gravity="left|center"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="0.6"
+                            android:background="@drawable/textlabel_bg"
+                            android:gravity="left|center"
+                            android:text="バッチ日付"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="left|center"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1.35"
+                            android:background="@drawable/list_background"
+                            android:gravity="left|center"
+                            android:hint="日付を選択"
+                            android:paddingStart="15dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="#514F4F"
+                            android:textSize="16sp"
+                            android:paddingRight="10dp"
+                            android:drawableRight="@drawable/ic_calendar"
+                      />
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="3.3"
+                        android:background="@drawable/list_background"
+                        android:orientation="vertical"
+                        android:weightSum="2.5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1.2"
+                            android:weightSum="4"
+                            android:layout_marginTop="2dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="38dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@drawable/textlabel_bg"
+                                android:gravity="left|center"
+                                android:paddingLeft="10dp"
+                                android:text="備考"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+
+                            <CheckBox
+                                android:id="@+id/cbremark"
+                                android:layout_width="0dp"
+                                android:layout_height="38dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/black"
+                                android:buttonTint="@color/black"
+                                android:gravity="center"
+                                android:text="あり"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/base" />
+
+                            <CheckBox
+                                android:id="@+id/cbnoremark"
+                                android:layout_width="0dp"
+                                android:layout_height="38dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/black"
+                                android:buttonTint="@color/black"
+                                android:gravity="center"
+                                android:text="なし"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/base" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1.2"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="38dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@drawable/textlabel_bg"
+                                android:gravity="left|center"
+                                android:paddingLeft="10dp"
+                                android:text="状況"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+
+                            <CheckBox
+                                android:id="@+id/cbpending"
+                                android:layout_width="0dp"
+                                android:layout_height="38dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/black"
+                                android:buttonTint="@color/black"
+                                android:gravity="center"
+                                android:text="未完了"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/base" />
+
+                            <CheckBox
+                                android:id="@+id/cbworking"
+                                android:layout_width="0dp"
+                                android:layout_height="38dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/black"
+                                android:buttonTint="@color/black"
+                                android:gravity="center"
+                                android:text="作業中"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/base" />
+
+                            <CheckBox
+                                android:id="@+id/cbdone"
+                                android:layout_width="0dp"
+                                android:layout_height="38dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/black"
+                                android:buttonTint="@color/black"
+                                android:gravity="center"
+                                android:text="完了"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/enter"
+                        android:layout_width="100dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.9"
+                        android:background="@drawable/green_rounded_corner_btn"
+                        android:gravity="center"
+                        android:text="@string/submit"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+
+                        android:background="@drawable/list_background"
+                        android:orientation="vertical"
+                        android:weightSum="4">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="0.6"
+                            android:background="@drawable/rounded_btn"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.8"
+                                android:gravity="center"
+                                android:text="バッチNo."
+                                android:textColor="#ededed"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:background="#dedede" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.6"
+                                android:gravity="center"
+                                android:text="備考"
+                                android:textColor="#ededed"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:background="#ededed" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.8"
+                                android:gravity="center"
+                                android:text="ステータス"
+                                android:textColor="#ededed"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:background="#ededed" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.8"
+                                android:gravity="center"
+                                android:text="ユーザー"
+                                android:textColor="#ededed"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="3.4">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/list"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:divider="@null" />
+
+                            <TextView
+                                android:id="@+id/nodata"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="データが見つかりません。"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

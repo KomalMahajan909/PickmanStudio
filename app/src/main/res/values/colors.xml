@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="listenerOn">#D0402F</color>
+    <color name="btnTapped">#dadada</color>
+    <color name="btnDefault">#ffffff</color>
+    <color name="primary">#f6f6f6</color>
+    <color name="primary_dark">#E12929</color>
+    <color name="primary_darker">#b40045</color>
+    <color name="accent">#FFFFFF</color>
+    <color name="appcolor">#312b2b</color>
+    <color name="activeeditText">#f1b1c5</color>
+    <color name="yellow">#efed65</color>
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+    <color name="oil">#333333</color>
+    <color name="monsoon">#777777</color>
+    <color name="jumbo">#888888</color>
+    <color name="aluminum">#999999</color>
+    <color name="base">#AAAAAA</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="l3">#777777</color>
+    <color name="l4">#0e0e0e</color>
+    <color name="txt_primary">#0e0e0e</color>
+    <color name="txt_secondary">#777777</color>
+    <color name="white">#FFFFFF</color>
+    <color name="orange">#faa450</color>
+    <color name="light_red">#C92941</color>
+    <color name="blue">#468dda</color>
+    <color name= "darkblue">#0583AF</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="locationcolor">#ECECB8</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="layoutbackground">#D13E44</color>
+    <color name="layoutActionbar">#68091B</color>
+    <color name="Redcolor">#d71b1b</color>
+    <color name="lightpink">#f46f71</color>
+    <color name="textbackground">#d6d3d3</color>
+    <color name="sumbitbackground">#AAAAAA</color>
+    <color name="packing_btn">#95ce5f</color>
+    <color name="green_color">#008000</color>
+</resources>

@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_wallpaper">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_wallpaper"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <com.itechvision.ecrobo.pickman.Util.ActionBar
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/actionbar"
+            android:layout_alignParentEnd="true">
+
+            <ScrollView
+                android:id="@+id/scrollMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/dateLabel"
+                            android:layout_width="97dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/dateselect"
+                            android:text="バッチ作成日"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/dateselect"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:drawableRight="@drawable/ic_calendar"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:paddingRight="10dp"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            android:windowSoftInputMode="stateAlwaysHidden" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/batchLabel"
+                            android:layout_width="97dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/dateselect"
+                            android:text="バッチNo."
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/spinnerlayout"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:paddingRight="10dp"
+                            android:selectAllOnFocus="true">
+
+                            <Spinner
+                                android:id="@+id/batchspinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/barcodeLabel"
+                            android:layout_width="97dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/barcode"
+                            android:text="@string/barcode"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/barcode"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:paddingRight="10dp"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            android:windowSoftInputMode="stateAlwaysHidden" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/add_qty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="97dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/textlabel_bg"
+                                android:text="Scanned"
+                                android:textColor="@color/white"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:editable="false"
+                                android:inputType="none"
+                                android:selectAllOnFocus="true" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="97dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/textlabel_bg"
+                                android:text="Qty"
+                                android:textColor="@color/white"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/totalQuantity"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:inputType="none"
+                                android:selectAllOnFocus="false"
+                                android:windowSoftInputMode="stateAlwaysHidden" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="97dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/textlabel_bg"
+                                android:text="Part No"
+                                android:textColor="@color/white"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/productCode"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:inputType="none"
+                                android:selectAllOnFocus="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="97dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/textlabel_bg"
+                                android:text="P Name"
+                                android:textColor="@color/white"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/productName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:inputType="none"
+                                android:selectAllOnFocus="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="97dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/textlabel_bg"
+                                android:text="Order No"
+                                android:textColor="@color/white"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/orderNo"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:inputType="none"
+                                android:selectAllOnFocus="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="97dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/textlabel_bg"
+                                android:text="R Name"
+                                android:textColor="@color/white"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/receiver_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:inputType="none"
+                                android:selectAllOnFocus="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="35dp">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="35dp"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/textlabel_bg"
+                                    android:labelFor="@+id/barcode"
+                                    android:text="変更後配送会社"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/spinnershippinglayout"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1.7"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:gravity="center">
+
+                                <com.reginald.editspinner.EditSpinner
+                                    android:id="@+id/changeshippingcmnpy"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_marginStart="5dp"
+                                    android:background="@android:color/transparent"
+                                    android:editable="false"
+                                    android:singleLine="true"
+                                    android:text="配送会社を選択"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14sp"
+                                    app:dropDownDrawable="@drawable/dropdown"
+                                    app:dropDownDrawableHeight="30dp"
+                                    app:dropDownDrawableWidth="30dp" />
+                            </RelativeLayout>
+
+                            <Button
+                                android:id="@+id/id_c_company"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="0.28"
+                                android:background="@drawable/green_rounded_corner_btn"
+                                android:gravity="center"
+                                android:text="C"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="35dp">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="35dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/textlabel_bg"
+                                    android:labelFor="@+id/barcode"
+                                    android:text="変更後個口"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/spinnerlayout1"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1.7"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:gravity="center">
+
+                                <com.reginald.editspinner.EditSpinner
+                                    android:id="@+id/koguchi"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_marginStart="5dp"
+                                    android:background="@android:color/transparent"
+                                    android:editable="false"
+                                    android:singleLine="true"
+                                    android:text="個口を選択"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14sp"
+                                    app:dropDownDrawable="@drawable/dropdown"
+                                    app:dropDownDrawableHeight="30dp"
+                                    app:dropDownDrawableWidth="30dp" />
+                            </RelativeLayout>
+
+                            <Button
+                                android:id="@+id/id_c_koguchi"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="0.28"
+                                android:background="@drawable/green_rounded_corner_btn"
+                                android:gravity="center"
+                                android:text="C"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/submit"
+                                android:layout_width="100dp"
+                                android:layout_height="35dp"
+                                android:layout_marginStart="20dp"
+                                android:background="@color/packing_btn"
+                                android:text="変更"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/add_layout"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/gray_button_background"
+                            android:onClick="AddLayout"
+                            android:text="@string/showkeyboard"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            tools:ignore="OnClick" />
+
+                        <Button
+                            android:id="@+id/enter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/packing_btn"
+                            android:text="@string/submit" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_number"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/layoutActionbar"
+    android:id="@+id/action_bar_layout"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relMainAction"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/img1ActionBar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_menu"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/relLayout1"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="60dp"
+            >
+
+            <Button
+                android:id="@+id/notif_count_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_packing"
+                android:gravity="center"
+                android:minHeight="32dp"
+                android:minWidth="32dp"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="26sp"
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/notif_count_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/notif_count_green"
+                android:background="@drawable/shape_notification"
+                android:gravity="center"
+                android:minHeight="32dp"
+                android:minWidth="32dp"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="26sp"
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/notif_count_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/notif_count_red"
+                android:background="@drawable/shape_pickings"
+                android:gravity="center"
+                android:minHeight="32dp"
+                android:minWidth="32dp"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="26sp"
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/notif_count_yellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/notif_count_blue"
+                android:background="@drawable/shape_yellow_btn"
+                android:gravity="center"
+                android:minHeight="32dp"
+                android:minWidth="32dp"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="26sp"
+                android:visibility="gone"
+                >
+            </Button>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
+
+
+
+

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:background="@color/layoutActionbar">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ic_menu"
+            android:id="@+id/menubtn"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/menubtn"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/white"
+            android:text="@string/action_new_printer"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"/>
+
+
+    </RelativeLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.1"
+            android:layout_gravity="left|center"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="帳票選択"
+            android:textColor="@color/black"
+            android:layout_marginEnd="8dp"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1.8"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/basic_edittext_off_nopadding"
+            android:layout_height="45sp">
+            <com.reginald.editspinner.EditSpinner
+                android:id="@+id/et_categories"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:dropDownDrawable="@drawable/dropdown"
+                app:dropDownDrawableSpacing="15dp"
+                app:dropDownDrawableWidth="30dp"
+                app:dropDownDrawableHeight="30dp"
+                android:editable="false"
+                android:padding="2dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:hint="レポートを選択"
+                android:background="@android:color/transparent"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.1"
+            android:layout_gravity="left|center"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="テンプレート"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1.8"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/basic_edittext_off_nopadding"
+            android:layout_height="45sp">
+            <com.reginald.editspinner.EditSpinner
+                android:id="@+id/et_template"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:dropDownDrawable="@drawable/dropdown"
+                app:dropDownDrawableSpacing="15dp"
+                app:dropDownDrawableWidth="30dp"
+                app:dropDownDrawableHeight="30dp"
+                android:editable="false"
+                android:padding="2dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:hint="テンプレートを選択"
+                android:background="@android:color/transparent"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.1"
+            android:layout_gravity="left|center"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="パソコン名"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1.8"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/basic_edittext_off_nopadding"
+            android:layout_height="45sp">
+            <com.reginald.editspinner.EditSpinner
+                android:id="@+id/et_machine"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:dropDownDrawable="@drawable/dropdown"
+                app:dropDownDrawableSpacing="15dp"
+                app:dropDownDrawableWidth="30dp"
+                app:dropDownDrawableHeight="30dp"
+                android:editable="false"
+                android:padding="2dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:hint="コンピュータを選択"
+                android:background="@android:color/transparent"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.1"
+            android:layout_gravity="left|center"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="プリンター選択"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1.8"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/basic_edittext_off_nopadding"
+            android:layout_height="45sp">
+            <com.reginald.editspinner.EditSpinner
+                android:id="@+id/et_printer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:dropDownDrawable="@drawable/dropdown"
+                app:dropDownDrawableSpacing="15dp"
+                app:dropDownDrawableWidth="30dp"
+                app:dropDownDrawableHeight="30dp"
+                android:editable="false"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                android:hint="プリンターを選択"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:gravity="center"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:id="@+id/save"
+            android:textColor="@color/black"
+            android:background="@color/packing_btn"
+            android:text="保存"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:layout_gravity="center|end"
+            android:gravity="center|end"
+            android:id="@+id/savedprinter"
+            android:background="@color/blue_btn_bg_color"
+            android:text="設定されたプリンター"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_wallpaper"
+    tools:context="com.itechvision.ecrobo.pickman.Chatman.Arrivals.ReturnStockActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <com.itechvision.ecrobo.pickman.Util.ActionBar
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/actionbar"
+            android:layout_alignParentEnd="true">
+
+            <ScrollView
+                android:id="@+id/scrollMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        >
+
+                        <TextView
+                            android:layout_width="95dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/returning_number"
+                            android:text="返品問番"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            />
+
+                        <EditText
+                            android:id="@+id/returning_number"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="0.7"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            />
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/skipButton"
+                            android:background="@drawable/shape_notification"
+                            android:text="SKIP"
+                            android:layout_weight="0.3"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/white"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/orderIdlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/order_IDLabel"
+                            android:layout_width="95dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/orderId"
+                            android:text="注文ID"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/orderId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="0.8"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            android:windowSoftInputMode="stateAlwaysHidden" />
+
+                        <TextView
+                            android:id="@+id/trackingcheckLabel"
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/orderId"
+                            android:text="問番"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+
+                        <CheckBox
+                            android:id="@+id/trackingNoCheck"
+                            android:layout_width="30dp"
+                            android:layout_height="35dp"
+                            android:buttonTint="@color/white"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/orderReturn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/barcodeLabel"
+                                android:layout_width="95dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/textlabel_bg"
+                                android:labelFor="@+id/barcode"
+                                android:text="@string/barcode"
+                                android:textColor="@color/white"
+                                android:textSize="16dp" />
+
+                            <EditText
+                                android:id="@+id/barcode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:editable="false"
+                                android:inputType="none"
+                                android:maxLength="100"
+                                android:selectAllOnFocus="true"
+                                android:singleLine="true"
+                                android:windowSoftInputMode="stateAlwaysHidden" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/product_codeLabel"
+                                android:layout_width="95dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/textlabel_bg"
+                                android:labelFor="@+id/product_code"
+                                android:text="@string/productCode"
+                                android:textColor="@color/white"
+                                android:textSize="16dp" />
+
+                            <EditText
+                                android:id="@+id/product_code"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:editable="false"
+                                android:inputType="none"
+                                android:maxLength="100"
+                                android:selectAllOnFocus="true"
+                                android:singleLine="true"
+                                android:windowSoftInputMode="stateAlwaysHidden" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+
+
+                            <TextView
+                                android:id="@+id/product_nameLabel"
+                                android:layout_width="95dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/textlabel_bg"
+                                android:labelFor="@+id/product_name"
+                                android:text="@string/productName"
+                                android:textColor="@color/white"
+                                android:textSize="16dp" />
+
+                            <EditText
+                                android:id="@+id/product_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:editable="false"
+                                android:inputType="none"
+                                android:maxLength="100"
+                                android:selectAllOnFocus="true"
+                                android:singleLine="true"
+                                android:windowSoftInputMode="stateAlwaysHidden" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/return1Label"
+                                android:layout_width="95dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/textlabel_bg"
+                                android:text="良品化"
+                                android:textColor="@color/white"
+                                android:textSize="16dp" />
+
+                            <EditText
+                                android:id="@+id/return1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="0.25"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:editable="false"
+                                android:inputType="none"
+                                android:maxLength="100"
+                                android:windowSoftInputMode="stateAlwaysHidden" />
+
+                            <TextView
+                                android:id="@+id/return2Label"
+                                android:layout_width="95dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/textlabel_bg"
+                                android:text="不良品化"
+                                android:textColor="@color/white"
+                                android:textSize="16dp" />
+
+                            <EditText
+                                android:id="@+id/return2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="0.25"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:editable="false"
+                                android:inputType="none"
+                                android:singleLine="true"
+                                android:windowSoftInputMode="stateAlwaysHidden" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            >
+
+
+                            <TextView
+                                android:id="@+id/quantityLabel"
+                                android:layout_width="95dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/textlabel_bg"
+                                android:labelFor="@+id/quantity"
+                                android:text="@string/quantity"
+                                android:textColor="@color/white"
+                                android:textSize="16dp" />
+
+                            <EditText
+                                android:id="@+id/quantity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:editable="false"
+                                android:inputType="none"
+                                android:maxLength="100"
+                                android:selectAllOnFocus="true"
+                                android:singleLine="true"
+                                android:windowSoftInputMode="stateAlwaysHidden" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:visibility="visible"
+                            >
+
+                            <TextView
+                                android:layout_width="97dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/textlabel_bg"
+                                android:text="@string/stockClassification"
+                                android:textSize="14dp"
+                                android:textColor="@color/white"
+                                android:layout_marginLeft="1dp"
+                                android:layout_gravity="center"
+                                android:paddingTop="8dp"
+                                />
+
+                            <RelativeLayout
+                                android:id="@+id/stockspinnerLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                >
+
+                                <Spinner
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/classificationspinner"
+                                    android:layout_marginLeft="10dp"
+                                    >
+                                </Spinner>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            >
+
+                            <TextView
+                                android:layout_width="97dp"
+                                android:layout_height="40dp"
+                                android:text="ロケ"
+                                android:background="@drawable/textlabel_bg"
+                                android:textColor="@color/white"
+                                android:layout_marginLeft="1dp"
+                                android:layout_gravity="center"
+                                android:textSize="16sp"
+                                android:paddingTop="8dp"
+                                />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="10dp"
+                                android:id="@+id/location"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:maxLength="100"
+                                android:singleLine="true"
+                                android:selectAllOnFocus="true"
+                                android:layout_gravity="center"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/add_layout"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/gray_button_background"
+                        android:onClick="AddLayout"
+                        android:text="@string/showkeyboard"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_number"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

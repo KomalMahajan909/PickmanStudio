@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_wallpaper"
+    tools:context=".Chatman.Ship.ShippingActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        >
+
+        <com.itechvision.ecrobo.pickman.Util.ActionBar
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+        </com.itechvision.ecrobo.pickman.Util.ActionBar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_main"
+            android:layout_below="@id/actionbar"
+            android:layout_alignParentEnd="true"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/scrollMain"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_vertical"
+                    android:layout_marginLeft="@dimen/margin_horizontal"
+                    android:layout_marginRight="@dimen/margin_horizontal"
+                    android:layout_marginTop="@dimen/margin_vertical"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/gridMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:id="@+id/trackingNumberLabel"
+                            android:labelFor="@+id/trackingNumber"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:textColor="@color/white"
+                            android:text="@string/trackingNumber"
+                            />
+
+                        <EditText
+                            android:id="@+id/trackingNumber"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="false"
+                            android:layout_gravity="center"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_orderno_settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/orderno_settingsLabel"
+                            android:labelFor="@+id/orderId"
+                            android:layout_width="92dp"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:background="@drawable/textlabel_bg"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:layout_height="32dp"
+                            android:text="注文番号"
+
+                            />
+
+                        <EditText
+                            android:id="@+id/orderno_settings"
+                            android:layout_width="0dp"
+                            android:layout_height="32dp"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:maxLength="100"
+                            android:singleLine="true"
+                            android:paddingLeft="5dp"
+                            android:selectAllOnFocus="false"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/gridOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/orderNameLabel"
+                            android:labelFor="@+id/orderName"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:textColor="@color/white"
+                            android:text="@string/orderName"
+                            android:layout_gravity="center"
+                            />
+
+                        <EditText
+                            android:id="@+id/orderName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:layout_marginLeft="10dp"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="false"
+                            android:singleLine="true"
+                            android:layout_gravity="center"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/orderIdLabel"
+                            android:labelFor="@+id/orderId"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:textColor="@color/white"
+                            android:text="@string/orderId"
+                            />
+
+                        <EditText
+                            android:id="@+id/orderId"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:layout_height="32dp"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLength="100"
+                            android:singleLine="true"
+                            android:layout_gravity="center"
+                            android:selectAllOnFocus="true"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:layout_marginLeft="10dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gridBarcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/barcodeLabel"
+                            android:labelFor="@+id/barcode"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:text="@string/barcode"
+                            />
+
+                        <EditText
+                            android:id="@+id/barcode"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:layout_height="32dp"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:maxLength="100"
+                            android:singleLine="true"
+                            android:layout_gravity="center"
+                            android:selectAllOnFocus="true"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gridQuantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/quantityLabel"
+                            android:labelFor="@+id/quantity"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:text="@string/quantity"
+                            />
+
+                        <EditText
+                            android:id="@+id/quantity"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:layout_height="32dp"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:maxLength="100"
+                            android:layout_gravity="center"
+                            android:singleLine="true"
+                            android:selectAllOnFocus="true"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/gridOrderDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/productCodeLabel"
+                            android:labelFor="@+id/productCode"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:text="@string/productCode"
+                            />
+
+                        <EditText
+                            android:id="@+id/productCode"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:layout_height="32dp"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:maxLength="100"
+                            android:singleLine="true"
+                            android:selectAllOnFocus="false"
+                            android:focusable="false"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gridOrderDetail1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/productNameLabel"
+                            android:labelFor="@+id/productName"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:text="@string/productName"
+                            />
+
+                        <TextView
+                            android:id="@+id/productName"
+                            android:layout_height="32dp"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:maxLength="100"
+                            android:editable="false"
+                            android:ellipsize="marquee"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:inputType="none"
+                            android:textSize="16dp"
+                            android:textColor="@color/black"
+                            android:selectAllOnFocus="false"
+                            android:focusable="false"
+                            android:layout_gravity="center"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gridQuantityDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/totalQuantityLabel"
+                            android:labelFor="@+id/totalQuantity"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:text="@string/total_quantity"
+                            />
+
+                        <EditText
+                            android:id="@+id/totalQuantity"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:layout_height="32dp"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:maxLength="100"
+                            android:singleLine="true"
+                            android:selectAllOnFocus="false"
+                            android:focusable="false"
+                            android:layout_gravity="center"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/lotnoLabel"
+                            android:labelFor="@+id/lotno"
+                            android:layout_width="92dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:textColor="@color/white"
+                            android:text="@string/lotno"
+                            android:layout_gravity="center"
+                            />
+
+                        <EditText
+                            android:id="@+id/lotno"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:layout_height="32dp"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:maxLength="100"
+                            android:singleLine="true"
+                            android:selectAllOnFocus="false"
+                            android:focusable="false"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/boxnoLabel"
+                            android:labelFor="@+id/box_no"
+                            android:layout_width="92dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:textColor="@color/white"
+                            android:layout_height="32dp"
+                            android:textSize="@dimen/text_15"
+                            android:textStyle="bold"
+                            android:text="@string/boxSize"
+                            android:layout_gravity="center"
+                            />
+
+                        <EditText
+                            android:id="@+id/box_no"
+                            android:layout_width="185dp"
+                            android:layout_height="32dp"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:paddingLeft="5dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:layout_marginLeft="10dp"
+                            android:maxLength="100"
+                            android:singleLine="true"
+                            android:selectAllOnFocus="true"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/ll_shipkoguchi"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="35dp">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="35dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/textlabel_bg"
+                                    android:labelFor="@+id/barcode"
+                                    android:text="変更後配送会社"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/spinnershippinglayout"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1.7"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:gravity="center">
+
+                                <com.reginald.editspinner.EditSpinner
+                                    android:id="@+id/changeshippingcmnpy"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_marginStart="5dp"
+                                    android:background="@android:color/transparent"
+                                    android:editable="false"
+                                    android:singleLine="true"
+                                    android:text="配送会社を選択"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14sp"
+                                    app:dropDownDrawable="@drawable/dropdown"
+                                    app:dropDownDrawableHeight="30dp"
+                                    app:dropDownDrawableWidth="30dp" />
+                            </RelativeLayout>
+
+                            <Button
+                                android:id="@+id/id_c_company"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="0.28"
+                                android:background="@drawable/green_rounded_corner_btn"
+                                android:gravity="center"
+                                android:text="C"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="35dp">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="35dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/textlabel_bg"
+                                    android:labelFor="@+id/barcode"
+                                    android:text="変更後個口"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/spinnerlayout1"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1.7"
+                                android:background="@drawable/basic_edittext_off_nopadding"
+                                android:gravity="center">
+
+
+                                <com.reginald.editspinner.EditSpinner
+                                    android:id="@+id/koguchi"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_marginStart="5dp"
+                                    android:background="@android:color/transparent"
+                                    android:editable="false"
+                                    android:singleLine="true"
+                                    android:text="個口を選択"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14sp"
+                                    app:dropDownDrawable="@drawable/dropdown"
+                                    app:dropDownDrawableHeight="30dp"
+                                    app:dropDownDrawableWidth="30dp"/>
+
+                            </RelativeLayout>
+
+                            <Button
+                                android:id="@+id/id_c_koguchi"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="0.28"
+                                android:background="@drawable/green_rounded_corner_btn"
+                                android:gravity="center"
+                                android:text="C"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/submit"
+                                android:layout_width="100dp"
+                                android:layout_height="35dp"
+                                android:layout_marginStart="20dp"
+                                android:background="@color/packing_btn"
+                                android:text="変更"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="110dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/text_15"
+                        android:layout_gravity="center"
+                        >
+
+                        <Button
+                            android:layout_width="130dp"
+                            android:layout_height="35dp"
+                            android:text="@string/showkeyboard"
+                            android:textSize="12dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/gray_button_background"
+                            android:id="@+id/add_layout"
+                            android:onClick="AddLayout"
+                            tools:ignore="OnClick"
+                            />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="@string/submit"
+                            android:textSize="12dp"
+                            android:background="@color/packing_btn"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/enter"
+                            android:layout_marginLeft="10dp"
+                            tools:ignore="OnClick"
+                            />
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="印刷"
+                            android:textSize="15dp"
+                            android:layout_gravity="center|top"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/shape_pickings"
+                            android:id="@+id/Print"
+                            android:layout_marginLeft="10dp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/layout_number"
+            android:visibility="invisible"
+            >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

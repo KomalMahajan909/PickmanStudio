@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_wallpaper"
+    android:orientation="vertical"
+    android:id="@+id/activity_arrival"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:weightSum="100"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_wallpaper"
+    >
+
+    <com.itechvision.ecrobo.pickman.Util.ActionBar
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </com.itechvision.ecrobo.pickman.Util.ActionBar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_main"
+        android:layout_below="@id/actionbar"
+        android:layout_alignParentEnd="true"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollMain"
+            >
+
+<LinearLayout
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+   <CheckBox
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:text="Wifi"
+       android:buttonTint="@color/white"
+       android:textColor="@color/white"
+    android:layout_weight="1"
+    android:id="@+id/wificheck"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.6"
+            android:text="Scan"
+            android:id="@+id/scanbtn"></Button>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Version"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/basic_edittext_off"
+        android:nestedScrollingEnabled="true"
+        android:layout_weight="1" />
+</LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>

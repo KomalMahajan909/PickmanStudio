@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:minHeight="32dp"
+    >
+
+    <TextView
+        android:id="@+id/rbatch_4"
+        android:layout_width="40dp"
+        android:paddingLeft="5dp"
+        android:paddingBottom="2dp"
+        android:textSize="18dp"
+        android:layout_height="wrap_content"
+        android:textColor="#222222"
+        />
+
+    <TextView
+        android:id="@+id/rbatch_0"
+        android:layout_marginLeft="20dp"
+        android:layout_width="40dp"
+        android:textSize="@dimen/text_20"
+        android:layout_height="wrap_content"
+        android:textColor="#222222"
+        />
+
+    <TextView
+        android:id="@+id/rbatch_1"
+        android:layout_width="50dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="@dimen/text_20"
+        android:layout_height="wrap_content"
+        android:textColor="#222222"
+        />
+
+    <TextView
+        android:id="@+id/rbatch_2"
+        android:layout_width="40dp"
+        android:textSize="@dimen/text_20"
+        android:layout_marginLeft="15dp"
+        android:layout_height="wrap_content"
+        android:textColor="#222222"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/rbatch_3"
+        android:layout_width="50dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="@dimen/text_20"
+        android:layout_height="wrap_content"
+        android:textColor="#222222"
+        />
+
+    <TextView
+        android:id="@+id/rbatch_5"
+        android:layout_width="60dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="@dimen/text_20"
+        android:layout_height="wrap_content"
+        android:textColor="#222222"
+        />
+</LinearLayout>

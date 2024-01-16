@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="5dp"
+    android:paddingRight="10dp"
+    >
+
+    <TextView
+        android:id="@+id/btc_ins_0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#222222"
+        android:layout_weight="0.3"
+        android:gravity="left"
+        />
+
+    <TextView
+        android:id="@+id/btc_ins_1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textColor="#222222"
+        android:gravity="left"
+        />
+
+    <TextView
+        android:id="@+id/btc_ins_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#222222"
+        android:layout_weight="0.5"
+        android:layout_marginLeft="8dp"
+        android:gravity="left"
+        />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:id="@+id/delete_batch"
+        android:src="@drawable/ic_delete"
+        android:layout_weight="0.5"
+        />
+</LinearLayout>

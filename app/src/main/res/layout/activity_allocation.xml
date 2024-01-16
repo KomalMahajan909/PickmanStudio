@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_wallpaper"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_wallpaper"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <com.itechvision.ecrobo.pickman.Util.ActionBar
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"></com.itechvision.ecrobo.pickman.Util.ActionBar>
+
+        <RelativeLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/actionbar">
+
+            <ScrollView
+                android:id="@+id/scrollMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/check_caseqty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:buttonTint="@color/white"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="入荷数入数換算"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:layout_marginBottom="7dp"
+                        />
+                    <LinearLayout
+                        android:id="@+id/gridMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/barcodeLabel"
+                            android:layout_width="103dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/barcode"
+                            android:text="@string/barcode"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/barcode"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="true"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            android:windowSoftInputMode="stateAlwaysHidden" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/partnoLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="103dp"
+                            android:layout_height="49dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/barcode"
+                            android:text="@string/productCode"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/spinnerlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/basic_edittext_off_nopadding">
+
+                            <Spinner
+                                android:id="@+id/partnoSpinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:paddingLeft="5dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gridlot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/lotnoLabel"
+                            android:layout_width="103dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/lotno"
+                            android:text="@string/lotno"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/lotno"
+                            android:layout_width="0dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="true"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="true"
+                            android:windowSoftInputMode="stateAlwaysHidden" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gridExpiration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/expirationLabel"
+                            android:layout_width="103dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/expiration"
+                            android:text="消費期限"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/expiration"
+                            android:layout_width="190dp"
+                            android:layout_height="32dp"
+                            android:layout_column="1"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_row="0"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/quantityLabel"
+                            android:layout_width="103dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/quantity"
+                            android:text="@string/quantity"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/quantity"
+                            android:layout_width="0dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            android:windowSoftInputMode="stateAlwaysHidden" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/totalquantityLabel"
+                            android:layout_width="103dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/totalquantity"
+                            android:text="棚入可能数"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/totalquantity"
+                            android:layout_width="190dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="false"
+                            android:focusable="false"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/product_codeLabel"
+                            android:layout_width="103dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/product_code"
+                            android:text="@string/productCode"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/product_code"
+                            android:layout_width="190dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="false"
+                            android:focusable="false"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/product_nameLabel"
+                            android:layout_width="103dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/product_name"
+                            android:text="@string/productName"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/product_name"
+                            android:layout_width="190dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:textSize="16dp"
+                            android:textColor="@color/black"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/standardlabel"
+                            android:layout_width="103dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/standard"
+                            android:text="規格1/規格2"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/standard"
+                            android:layout_width="190dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxLength="100"
+                            android:overScrollMode="always"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:selectAllOnFocus="false"
+                            android:focusable="false"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/locationLabel"
+                            android:layout_width="103dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/textlabel_bg"
+                            android:labelFor="@+id/location"
+                            android:text="@string/location"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/location"
+                            android:layout_width="0dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:maxLength="100"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true"
+                            android:windowSoftInputMode="stateAlwaysHidden" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/ll_abc"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="103dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="ランク"
+                            android:textColor="@color/white" />
+
+                        <EditText
+                            android:id="@+id/abc"
+                            android:layout_width="0dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:editable="false"
+                            android:inputType="none"
+                            android:maxEms="100"
+                            android:selectAllOnFocus="false"
+                            android:focusable="false"
+                            android:singleLine="false" />
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/basic_edittext_off_nopadding">
+
+                        <Spinner
+                            android:id="@+id/classificationspinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"></Spinner>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/grey_rounded_btn"
+                        android:maxLength="100"
+                        android:text="Z-ロケーション"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:windowSoftInputMode="stateAlwaysHidden" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_listdialog"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/basic_edittext_off"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:visibility="visible"
+                        android:nestedScrollingEnabled="true"
+                        android:layout_marginTop="5dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingRight="10dp"
+                            android:minHeight="32dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                >
+
+                                <TextView
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/location"
+                                    android:textColor="@color/light_red"
+                                    />
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:text=":"
+                                    android:layout_marginLeft="5dp"
+                                    android:textColor="@color/light_red"
+                                    />
+                                <TextView
+                                    android:id="@+id/pck_0"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#222222"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:id="@+id/lay_lot"
+                                android:visibility="gone"
+                                >
+
+                                <TextView
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lotno"
+                                    android:textColor="@color/light_red"
+                                    />
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:text=":"
+                                    android:layout_marginLeft="5dp"
+                                    android:textColor="@color/light_red"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/pck_1"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#222222"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:id="@+id/lay_exp"
+                                android:visibility="gone"
+                                >
+
+                                <TextView
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Exp."
+                                    android:textColor="@color/light_red"
+                                    />
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:text=":"
+                                    android:layout_marginLeft="5dp"
+                                    android:textColor="@color/light_red"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/pck_2"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#222222"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                >
+
+                                <TextView
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/quantity"
+                                    android:textColor="@color/light_red"
+                                    />
+
+                                <TextView
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:text=":"
+                                    android:layout_marginLeft="5dp"
+                                    android:textColor="@color/light_red"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/pck_3"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#222222"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <!-- <ListView
+                         android:id="@+id/listAllocation"
+                         android:layout_width="wrap_content"
+                         android:layout_height="75dp"
+                         android:layout_below="@+id/allocationHeader"
+                         android:layout_marginTop="5dp"
+                         android:background="@drawable/list_border"
+                         android:nestedScrollingEnabled="true" />-->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/grey_rounded_btn"
+                        android:maxLength="100"
+                        android:text="ロケーション"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:windowSoftInputMode="stateAlwaysHidden" />
+
+                    <ListView
+
+                        android:id="@+id/listLocations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="90dp"
+                        android:layout_below="@+id/allocationHeader"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/basic_edittext_off"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:visibility="visible"
+                        android:layout_marginLeft="1dp"
+                        android:nestedScrollingEnabled="true" />
+
+                    <Button
+                        android:id="@+id/add_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/gridlocationDetail"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/gray_btn_bg_color"
+                        android:onClick="AddLayout"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="@string/showkeyboard"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="5dp"/>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_number"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

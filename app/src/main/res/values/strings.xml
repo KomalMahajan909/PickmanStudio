@@ -1,0 +1,178 @@
+<resources>
+
+    <string name="app_name">Pickman</string>
+    <string name="action_new_ship">レジ検品</string>
+    <string name="action_dumy_ship">B2B検品</string>
+    <string name="action_move">在庫移動</string>
+    <string name="action_move_location">ロケ移動</string>
+    <string name="action_inventory">棚卸</string>
+    <string name="action_inventory_tally">棚卸 割符</string>
+    <string name="action_print_label">ラベル印刷</string>
+    <string name="action_order_allocate">一体型印刷</string>
+    <string name="action_print_invoice">プリンター選択</string>
+    <string name="action_sendLog">ログ送信</string>
+    <string name="action_stock_adjustment">在庫調整</string>
+    <string name="action_search_product">商品検索</string>
+    <string name="action_search_location">ロケ検索</string>
+    <string name="action_login">トップ</string>
+    <string name="action_setting">HOME</string>
+    <string name="action_logout">ログアウト</string>
+    <string name="action_new_printer">New Printer</string>
+    <string name="action_quit">終了</string>
+    <string name="action_print_seal">印刷</string>
+    <string name="action_picking">ピッキング</string>
+    <string name="action_new_picking">ピッキング検品</string>
+    <string name="action_box_number">箱サイズ変更</string>
+    <string name="action_item_shipped">小口変更</string>
+    <string name="action_packing_Set">セット制作指示(Regi)</string>
+    <string name="action_new_picking_Set">セット制作指示(Pic)</string>
+    <string name="action_packing_specification">出荷総量検品</string>
+    <string name="action_shop_select">店舗選択</string>
+    <string name="unpin">画面固定解除</string>
+    <string name="action_batch_picking">GASピッキング</string>
+    <string name="action_new_batch_picking">Rバッチ検品</string>
+    <string name="action_userinfo">ユーザー</string>
+    <string name="action_stock_change">在庫マイナス</string>
+    <string name="action_senddata">送信</string>
+    <string name="action_showinfo">情報</string>
+    <string name="action_arrival">入荷検品</string>
+    <string name="action_customer_arrival">入荷検品ECMS</string>
+    <string name="action_batch_arrival">入荷検品（バッチ）</string>
+    <string name="action_allocation">棚入れ</string>
+    <string name="action_return">返品入荷</string>
+    <string name="action_return_allocation">返品棚入れ</string>
+    <string name="action_ship">出荷検品</string>
+    <string name="action_return_stock">返品登録</string>
+    <string name="action_search_arrival_no">配達管理</string>
+    <string name="arrival_no">入庫番号</string>
+    <string name="action_new_ship_background">レジ検品(B)</string>
+    <string name="action_iris_picking">ケースピック検品</string>
+    <string name="orderId">注文ID</string>
+    <string name="orderNo">注文No.</string>
+    <string name="orderName">注文者</string>
+    <string name="serialno">シリアルNo.</string>
+    <string name="plateno">プレートno.</string>
+    <string name="standardOneLabel">規格1</string>
+    <string name="standardTwoLabel">規格2</string>
+    <string name="productname">商品名</string>
+    <string name="remainingQuantity">注文残数</string>
+    <string name="shortBarcode">バーコード</string>
+    <string name="numberOfLines">行数</string>
+    <string name="trackingNumber">問い番号</string>
+    <string name="barcode">バーコード</string>
+    <string name="quantity">数量</string>
+    <string name="boxSize">箱サイズ</string>
+    <string name="total_quantity">Total数量</string>
+    <string name="lotno">ロット</string>
+    <string name="caseQuantity">入数</string>
+    <string name="productCode">品番</string>
+    <string name="stockClassification">在庫区分</string>
+    <string name="supplierDate">予定日</string>
+    <string name="orderNumber">注文番号</string>
+    <string name="supplier">仕入れ先</string>
+    <string name="stock">在庫数</string>
+    <string name="send_to_server">サーバへ送信</string>
+    <string name="work_scanned">scan</string>
+    <string name="app_inventory">棚卸</string>
+    <string name="work_change">変動</string>
+    <string name="frontage">間口</string>
+    <string name="showkeyboard">キーボードを表示</string>
+    <string name="hideKeyboard">キーボードを隠す</string>
+    <string name="submit">送信</string>
+    <string name="standardone">規格1</string>
+    <string name="standardtwo">規格2</string>
+    <string name="currentstock">移動可能数</string>
+
+    <string name="destination">移動先ロケ</string>
+    <string name="location">ロケ</string>
+    <string name="crash_toast_text">App report sent</string>
+    <string name="productName">品名</string>
+    <string name="title_activity_batch">BatchActivity</string>
+    <string name="btnAnd">&amp;</string>
+    <string name="btnAt">@</string>
+    <string name="truck">台車</string>
+    <string name="date">日付</string>
+    <string name="size">サイズ</string>
+    <string name="color">色</string>
+
+    //menus and titles
+    <string name="SlipPrint">自動印刷</string>
+    <string name="TruckBatch">マルチピック</string>
+    <string name="RFPicking">RFID出荷検品</string>
+    <string name="weight">重量</string>
+    <string name="action_returnstock_barcode">Ｓ専用返品</string>
+    <string name="MitsukoshiArrival">箱ID入荷検品</string>
+    <string name="dialogarrival">MENUにて「Lot No./Exp.」が
+    選択されていません。
+作業を進めますか？
+[ｷｬﾝｾﾙ]を選択するとHOME画面に遷移します。</string>
+
+
+    <!--  /* Weight bluetooth Strings*/-->
+    <string name="not_connected">You are not connected to a device</string>
+    <string name="already_connected">already connected</string>
+    <string name="title_connecting">connecting.. </string>
+    <string name="title_connected">connected </string>
+
+    <!-- -<string name="title_connected_to">
+connected to
+<xliff:g id="device_name">%1$s</xliff:g>
+
+</string>-->
+
+    <string name="title_not_connected">not connected</string>
+
+
+    <!-- AlertDialog -->
+
+    <string name="alert_before">設定を変更するためにはデバイスの電源投入後60秒以内にコマンドモードにする必要があります。</string>
+    <string name="alert_after">デバイスの設定を反映させるためにはデバイスの電源を再投入する必要があります。</string>
+    <string name="alert_poweron">デバイスへ電源を再投入するためにリセットスイッチを押してください。LEDが一秒間に2回点滅していることを確認できたらOKをクリックしてください。</string>
+    <string name="alert_end">終了しますか？</string>
+    <string name="alert_ok">OK</string>
+
+    <string name="alert_cancel">キャンセル</string>
+
+
+    <!-- Error -->
+
+    <string name="none_paired">デバイス未検出</string>
+    <string name="bt_not_enabled_leaving">Bluetooth機能を有効にできませんでした。プログラムを終了します。</string>
+    <string name="error_msg01">デバイスを選択してください。</string>
+    <string name="error_msg02">接続エラー\n\n以下の2点を確認してください。\n1.デバイスの電源がOFFになっていないか\n2.他のデバイスを選択していないか\n</string>
+    <string name="error_msg03">エラーが解決しない場合は、端末の設定画面よりBluetooth機能をいったん無効にしてください\n（その後有効にしてください）。</string>
+    <string name="error_msg04">コマンドモードに移行できませんでした。</string>
+    <string name="error_msg05">コマンドモードに移行できませんでした。\n\n適切なデバイスが選択されているか確認してください。</string>
+
+
+    <!-- demoversion-->
+    <string name="version">1.0.362</string>
+    <string name="builddate">20/12/2023</string>
+    <string name="version1">version 1.0.362</string>
+
+    <string-array name="category">
+        <item>納品書</item>
+        <item>後払い用紙</item>
+        <item>伝票</item>
+        <item>Category 4</item>
+        <item>Category 5</item>
+    </string-array>
+
+    <string-array name="template">
+        <item>testetst</item>
+        <item>8080</item>
+        <item>ha</item>
+        <item>template 4</item>
+        <item>template 5</item>
+    </string-array>
+
+    <string-array name="printer">
+        <item>SATO Lesprit408v</item>
+        <item>Microsoft Print to PDF</item>
+        <item>printer 3</item>
+        <item>printer 4</item>
+        <item>printer 5</item>
+    </string-array>
+
+
+</resources>

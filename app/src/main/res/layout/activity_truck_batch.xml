@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_wallpaper"
+    android:orientation="vertical"
+    android:id="@+id/activity_arrival">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_wallpaper">
+
+        <com.itechvision.ecrobo.pickman.Util.ActionBar
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.itechvision.ecrobo.pickman.Util.ActionBar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_main"
+            android:layout_below="@id/actionbar"
+            android:layout_alignParentEnd="true">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollMain">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="3.5dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:gravity="center"
+                    android:text="出荷予定日"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:maxLength="100"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:selectAllOnFocus="true"
+                    android:layout_marginLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:drawableRight="@drawable/ic_calendar"
+                    android:background="@drawable/basic_edittext_off_nopadding"
+                    android:windowSoftInputMode="stateAlwaysHidden" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:gravity="center"
+                    android:text="ゾーン"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/ZoneSpinnerlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/basic_edittext_off_nopadding">
+
+                    <Spinner
+                        android:id="@+id/zoneSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:paddingLeft="5dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:gravity="center"
+                    android:text="出荷種別"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+                <RelativeLayout
+                    android:id="@+id/shipmentSpinnerlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/basic_edittext_off_nopadding">
+
+                    <Spinner
+                        android:id="@+id/shipmentSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:paddingLeft="5dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:gravity="center"
+                    android:text="同梱物"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/itemSpinnerlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/basic_edittext_off_nopadding"
+                    >
+
+                    <Spinner
+                        android:id="@+id/ItemSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:paddingLeft="5dp"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:gravity="center"
+                    android:text="配送方法"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+                <RelativeLayout
+                    android:id="@+id/itemshippincompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/basic_edittext_off_nopadding">
+
+                    <Spinner
+                        android:id="@+id/shippingcompanyspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:paddingLeft="5dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/textlabel_bg"
+                    android:gravity="center"
+                    android:text="@string/truck"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:id="@+id/truck"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:layout_gravity="center"
+                    android:textIsSelectable="true"
+                    android:background="@drawable/basic_edittext_off_nopadding"
+                    android:paddingLeft="10dp"
+                    android:windowSoftInputMode="stateAlwaysHidden" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/add_layout"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/gray_button_background"
+                    android:gravity="center"
+                    android:onClick="AddLayout"
+                    android:text="@string/showkeyboard"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    />
+
+                <Button
+                    android:id="@+id/enter"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/packing_btn"
+                    android:text="@string/submit"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/clear"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/gray_button_background"
+                    android:gravity="center"
+                    android:text="Clear Cancel List"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+            </ScrollView>
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/layout_number"
+        android:visibility="invisible">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>

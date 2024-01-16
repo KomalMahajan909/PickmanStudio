@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_wallpaper"
+        >
+
+        <com.itechvision.ecrobo.pickman.Util.ActionBar
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </com.itechvision.ecrobo.pickman.Util.ActionBar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_main"
+            android:layout_below="@id/actionbar"
+            android:layout_alignParentEnd="true"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollMain"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    >
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="7dp"
+                        >
+
+                        <RadioGroup
+                            android:id="@+id/rfidRg"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            >
+
+                            <RadioButton
+                                android:id="@+id/userf"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:textSize="15dp"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Use RFID"
+                                android:layout_weight="1"
+                                android:onClick="RFIDUse"
+                                android:checked="true"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/usebarcode"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_marginLeft="10dp"
+                                android:textSize="15dp"
+                                android:layout_weight="1"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Use Barcode"
+                                android:onClick="RFIDUse"
+                                />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/barcodelayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="97dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="Barcode"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            />
+
+                        <EditText
+                            android:id="@+id/barcode"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:selectAllOnFocus="true"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:layout_marginLeft="10dp"
+                            android:paddingLeft="5dp"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rfidLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="97dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="RFID"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            />
+
+                        <EditText
+                            android:id="@+id/rfid"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:singleLine="true"
+                            android:selectAllOnFocus="true"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:layout_marginLeft="10dp"
+                            android:paddingLeft="5dp"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/qntylayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:layout_width="97dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/textlabel_bg"
+                            android:text="@string/quantity"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            />
+
+                        <EditText
+                            android:id="@+id/quantity"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:singleLine="true"
+                            android:selectAllOnFocus="true"
+                            android:windowSoftInputMode="stateAlwaysHidden"
+                            android:layout_marginLeft="10dp"
+                            android:paddingLeft="5dp"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/black"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/skuLlayout"
+                        >
+
+                        <TextView
+                            android:layout_width="97dp"
+                            android:layout_height="30dp"
+                            android:text="SKU"
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            android:layout_gravity="center"
+                            />
+
+                        <EditText
+                            android:id="@+id/sku"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:paddingLeft="5dp"
+                            android:selectAllOnFocus="true"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/seriallayout"
+                        >
+
+                        <TextView
+                            android:layout_width="97dp"
+                            android:layout_height="30dp"
+                            android:text="Serial No."
+                            android:textColor="@color/white"
+                            android:background="@drawable/textlabel_bg"
+                            android:layout_gravity="center"
+                            />
+
+                        <EditText
+                            android:id="@+id/serial"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/basic_edittext_off_nopadding"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:paddingLeft="5dp"
+                            android:selectAllOnFocus="true"
+                            android:inputType="none"
+                            android:editable="false"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/textlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            />
+
+                        <TextView
+                            android:id="@+id/txt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        >
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Reading"
+                            android:textSize="15dp"
+                            android:textColor="@color/black"
+                            android:id="@+id/btnread"
+                            android:background="@color/blue_btn_bg_color"
+                            />
+
+                        <Button
+                            android:id="@+id/btnreceive"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Receiving"
+                            android:textSize="15dp"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:background="@color/packing_btn"
+                            android:visibility="gone"
+                            />
+
+                        <Button
+                            android:id="@+id/btnsend"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Send"
+                            android:textSize="15dp"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:background="@color/primary_dark"
+                            />
+
+                        <Button
+                            android:id="@+id/rfClear"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="clear"
+                            android:textSize="15dp"
+                            android:textColor="@color/black"
+                            android:background="@drawable/gray_button_background"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        >
+
+                        <Button
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:text="@string/showkeyboard"
+                            android:id="@+id/add_layout"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:background="@drawable/gray_button_background"
+                            android:onClick="AddLayout"
+                            android:textSize="15dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        android:layout_gravity="center"
+                        >
+
+                        <Button
+                            android:id="@+id/btn_connect"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp"
+                            android:text="Connect"
+                            android:background="@color/packing_btn"
+                            android:textSize="15dp"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/layout_number"
+            android:visibility="invisible"
+            >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

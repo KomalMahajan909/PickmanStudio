@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLinear"
+    android:layout_width="wrap_content"
+    android:layout_height="187dp"
+    android:layout_gravity="center|top"
+    android:orientation="vertical"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="1dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/grid_numbers1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp">
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonq"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:focusable="false"
+            android:background="@drawable/number_btn"
+            android:text="Q"
+            android:layout_marginLeft="1dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            />
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonw"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft ="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/number_btn"
+            android:focusable="false"
+            android:text="W"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttone"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/number_btn"
+            android:layout_marginLeft ="2dp"
+            android:layout_marginTop="5dp"
+            android:focusable="false"
+            android:text="E"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonr"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft ="2dp"
+            android:layout_marginTop="5dp"
+            android:focusable="false"
+            android:background="@drawable/number_btn"
+            android:text="R"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttont"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft ="2dp"
+            android:layout_marginTop="5dp"
+            android:focusable="false"
+            android:background="@drawable/number_btn"
+            android:text="T"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            />
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttony"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/number_btn"
+            android:text="Y"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:focusable="false"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonu"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft ="2dp"
+            android:layout_marginTop="5dp"
+            android:focusable="false"
+            android:background="@drawable/number_btn"
+            android:text="U"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttoni"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft ="2dp"
+            android:layout_marginTop="5dp"
+            android:focusable="false"
+            android:background="@drawable/number_btn"
+            android:text="I"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttono"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft ="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/number_btn"
+            android:focusable="false"
+            android:text="O"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonp"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/number_btn"
+            android:focusable="false"
+            android:text="P"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft ="2dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="58dp"
+        android:layout_height="48dp"
+        android:id="@+id/voiceSearchBtn"
+        android:layout_row="1"
+        android:layout_column="4"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/grid_number2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+
+        >
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttona"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:focusable="false"
+            android:background="@drawable/number_btn"
+            android:layout_marginTop ="5dp"
+            android:textSize="20dp"
+            android:text="A"
+            android:textColor="@color/white"/>
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttons"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop ="5dp"
+            android:layout_marginLeft ="2dp"
+            android:background="@drawable/number_btn"
+            android:focusable="false"
+            android:text="S"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            />
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttond"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft ="2dp"
+            android:focusable="false"
+            android:background="@drawable/number_btn"
+            android:text="D"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonf"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/number_btn"
+            android:layout_marginTop ="5dp"
+            android:layout_marginLeft ="2dp"
+            android:focusable="false"
+            android:text="F"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttong"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/number_btn"
+            android:layout_marginTop ="5dp"
+            android:layout_marginLeft="2dp"
+            android:focusable="false"
+            android:text="G"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonh"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/number_btn"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="2dp"
+            android:text="H"
+            android:focusable="false"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            />
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonj"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/number_btn"
+            android:layout_marginTop ="5dp"
+            android:layout_marginLeft ="2dp"
+            android:focusable="false"
+            android:text="J"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            />
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonk"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop ="5dp"
+            android:layout_marginLeft ="2dp"
+            android:background="@drawable/number_btn"
+            android:focusable="false"
+            android:text="K"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            />
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonl"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop ="5dp"
+            android:layout_marginLeft ="2dp"
+            android:background="@drawable/number_btn"
+            android:focusable="false"
+            android:text="L"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/grid_number3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <!--<com.itechvision.lenovo.chatmannew.widget.InputKeyButton-->
+        <!--android:id="@+id/buttonDel"-->
+        <!--android:layout_width="37dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@drawable/number_btn"-->
+        <!--android:layout_marginTop ="5dp"-->
+        <!--android:focusable="false"-->
+        <!--android:text="Del"-->
+        <!--android:textSize="18dp"/>-->
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonz"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop ="5dp"
+            android:layout_marginLeft ="2dp"
+            android:background="@drawable/number_btn"
+            android:focusable="false"
+            android:text="Z"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            />
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonx"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop ="5dp"
+            android:layout_marginLeft ="2dp"
+            android:background="@drawable/number_btn"
+            android:focusable="false"
+            android:text="X"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonc"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft ="2dp"
+            android:focusable="false"
+            android:background="@drawable/number_btn"
+            android:text="C"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonv"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/number_btn"
+            android:layout_marginTop ="5dp"
+            android:layout_marginLeft ="2dp"
+            android:focusable="false"
+            android:text="V"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonb"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/number_btn"
+            android:layout_marginTop ="5dp"
+            android:layout_marginLeft="2dp"
+            android:focusable="false"
+            android:text="B"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonn"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/number_btn"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="2dp"
+            android:text="N"
+            android:focusable="false"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            />
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonm"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/number_btn"
+            android:layout_marginTop ="5dp"
+            android:layout_marginLeft ="2dp"
+            android:focusable="false"
+            android:text="M"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <!--<com.itechvision.lenovo.chatmannew.widget.InputKeyButton-->
+        <!--android:id="@+id/buttonclear"-->
+        <!--android:layout_width="37dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@drawable/number_btn"-->
+        <!--android:layout_marginTop ="5dp"-->
+        <!--android:layout_marginLeft ="2dp"-->
+        <!--android:focusable="false"-->
+        <!--android:text="Clr"-->
+        <!--android:textSize="18dp"/>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/grid_number4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        >
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonDel"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:text="削除"
+            android:background="@color/base"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            />
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonchange"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@color/base"
+            android:layout_marginTop ="5dp"
+            android:focusable="false"
+            android:text="."
+            android:textSize="20dp"
+            android:layout_marginLeft="2dp"
+            />
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonenter"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@color/base"
+            android:layout_marginTop ="5dp"
+            android:focusable="false"
+            android:text="%"
+            android:textSize="20dp"
+            android:layout_marginLeft="2dp"/>
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonSkip"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop ="5dp"
+            android:focusable="false"
+            android:visibility="visible"
+            android:text="/"
+            android:background="@color/base"
+            android:textSize="20dp"
+            android:layout_marginLeft="2dp"
+            />
+
+        <com.itechvision.ecrobo.pickman.widget.InputKeyButton
+            android:id="@+id/buttonAllClear"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:focusable="false"
+            android:visibility="visible"
+            android:layout_marginTop ="5dp"
+            android:layout_marginLeft ="3dp"
+            android:text="@string/btnAt"
+            android:background="@color/base"
+            android:textSize="20dp"
+            />
+
+    </LinearLayout>
+</LinearLayout>

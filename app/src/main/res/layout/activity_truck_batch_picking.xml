@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_wallpaper"
+    android:orientation="vertical"
+    android:id="@+id/activity_arrival"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_wallpaper"
+        >
+
+        <com.itechvision.ecrobo.pickman.Util.ActionBar
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </com.itechvision.ecrobo.pickman.Util.ActionBar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_main"
+            android:layout_below="@id/actionbar"
+            android:layout_alignParentEnd="true"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollMain"
+                >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="right"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/skipList"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/gray_button_background"
+                        android:text="Cancelled"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:text="開始ロケ"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:layout_gravity="center"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/Spinnerlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        >
+
+                        <Spinner
+                            android:id="@+id/LocationSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:paddingLeft="5dp"
+                            />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" >
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/textlabel_bg"
+                        android:text="注文番号"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/order_no"
+                        android:layout_width="0dp"
+                        android:layout_height="34dp"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:editable="false"
+                        android:singleLine="true"
+                        android:selectAllOnFocus="true"
+                        android:windowSoftInputMode="stateAlwaysHidden"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="4dp"
+                    >
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:text="運送会社"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:layout_gravity="center"
+                        />
+
+                    <EditText
+                        android:id="@+id/shipping_company"
+                        android:layout_width="0dp"
+                        android:layout_height="34dp"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:editable="false"
+                        android:singleLine="true"
+                        android:selectAllOnFocus="true"
+                        android:windowSoftInputMode="stateAlwaysHidden"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:text="@string/location"
+                        android:textColor="@color/white"
+                        />
+
+                    <EditText
+                        android:id="@+id/location"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        android:editable="false"
+                        android:inputType="none"
+                        android:maxLength="100"
+                        android:layout_weight="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:layout_marginTop="4dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp"
+                    >
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:text="@string/productCode"
+                        android:textColor="@color/white"
+                        />
+
+                    <EditText
+                        android:id="@+id/showbarcode"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        android:editable="false"
+                        android:inputType="none"
+                        android:maxLength="100"
+                        android:layout_weight="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:layout_marginTop="4dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp"
+                    >
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:text="@string/color"
+                        android:textColor="@color/white"
+                        />
+
+                    <EditText
+                        android:id="@+id/color"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        android:editable="false"
+                        android:inputType="none"
+                        android:maxLength="100"
+                        android:layout_weight="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:layout_marginTop="4dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp"
+                    >
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:text="@string/size"
+                        android:textColor="@color/white"
+                        />
+
+                    <EditText
+                        android:id="@+id/size"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        android:editable="false"
+                        android:inputType="none"
+                        android:maxLength="100"
+                        android:layout_weight="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:layout_marginTop="4dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:text="@string/frontage"
+                        android:textColor="@color/white" />
+
+                    <EditText
+                        android:id="@+id/showfrontage"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        android:editable="false"
+                        android:inputType="none"
+                        android:maxLength="100"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/black"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:text="@string/productCode"
+                        android:textColor="@color/white"
+                        />
+
+                    <EditText
+                        android:id="@+id/barcode"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        android:windowSoftInputMode="stateAlwaysHidden"
+                        android:maxLength="100"
+                        android:inputType="none"
+                        android:editable="false"
+                        android:layout_weight="1"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp"
+                    >
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:text="@string/quantity"
+                        android:editable="false"
+                        android:inputType="none"
+                        android:textColor="@color/white"
+                        />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:inputType="none"
+                        android:editable="false"
+                        android:id="@+id/quantity"
+                        android:layout_weight="1"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        android:windowSoftInputMode="stateAlwaysHidden"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/textlabel_bg"
+                        android:text="@string/frontage"
+                        android:textColor="@color/white" />
+
+                    <EditText
+                        android:id="@+id/frontage"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:editable="false"
+                        android:background="@drawable/basic_edittext_off_nopadding"
+                        android:maxLength="100"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    >
+
+                    <Button
+                        android:id="@+id/skipbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/yellow"
+                        android:text="スキップ"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:layout_gravity="center"
+                        />
+
+                    <Button
+                        android:id="@+id/cancel"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/black"
+                        android:text="キャンセル"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                       />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                    <Button
+                        android:id="@+id/add_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gray_button_background"
+                        android:onClick="AddLayout"
+                        android:text="@string/showkeyboard"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        />
+
+                    <Button
+                        android:id="@+id/stop"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.6"
+                        android:background="#CC0001"
+                        android:text="stop"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:visibility="gone"
+                        />
+
+                    <Button
+                        android:id="@+id/search_screen"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="0.7"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/gray_button_background"
+                        android:text="検索"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="200dp"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/layout_number"
+            android:visibility="invisible"
+            android:layout_gravity="center_horizontal">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
